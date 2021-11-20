@@ -12,13 +12,13 @@
     <!-- header background -->
     <div class="user-bg">
         <!-- kode unik -->
-        <div class="code-id rounded">
+        <div class="code-id ">
             <span class="text-code-id me-1">kode id :</span>
             <span class="code">122032125643</span>
         </div>
 
         <!-- sosial media -->
-        <a href="" class="Thislink rounded social-media">
+        <a href="" class="Thislink social-media">
             <span class="social-media-text me-1">sosial media :</span>
             <i class="far fa-fw fa-plus-square"></i>
         </a>
@@ -87,8 +87,42 @@
         
         <!-- informasi -->
         <div class="right-user-content">
+            <!-- dashboard pengguna -->
+            <div class="user-dashboard">
+                <!-- info -->
+                <a href="" class="Thislink info-dashboard"><i class="fa fa-fw fa-info-circle"></i></a>
+                
+                <!-- pengunjung -->
+                <div class="viewer">
+                    <span class="text-viewer">viewer</span>
+                    <a href="" class="Thislink total-viewer">13.089</a>
+                </div>
+                
+                <!-- dashboard -->
+                <div class="stalkpost">
+                    <!-- penguntit -->
+                    <div class="stalker">
+                        <span class="text-stalker">stalker</span>
+                        <a href="" class="Thislink total-stalker">129</a>
+                    </div>
+                    
+                    <!-- postingan -->
+                    <div class="total-post">
+                        <span class="text-post">postingan</span>
+                        <a href="" class="Thislink post-total">3</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- informasi sekolah -->
-            <div class="school-information"></div>
+            <div class="school-information">
+                <!-- teks informasi -->
+                <span class="text-information">informasi</span>
+
+                <div class="list-information-school"></div>
+                <div class="list-information-school"></div>
+                <div class="list-information-school"></div>
+            </div>
         </div>
     </div>
     </main>
