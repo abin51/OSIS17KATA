@@ -146,16 +146,27 @@
 
             <!-- konten tes kemampuan -->
             <div class="skill-test-content">
-                <a href="" class="Thislink skill-content"></a>
-                <a href="" class="Thislink skill-content"></a>
-                <a href="" class="Thislink skill-content"></a>
-                <a href="" class="Thislink skill-content"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
+                <a href="" class="Thislink skill-content rounded-circle"></a>
             </div>
         </div>
 
         <!-- zona baca -->
         <div class="books rounded">
-        <div class="head-nav">
+            <div class="head-nav">
                 <span class="text-nav text-capitalize">taman baca</span>
                 <div class="view-menu">
                     <!-- list menu 1 -->
@@ -177,10 +188,59 @@
                     </div>
                 </div>
             </div>
+
+            <div class="book-content-wrapper">
+                <div class="list-book"></div>
+                <div class="list-book"></div>
+                <div class="list-book"></div>
+                <div class="list-book"></div>
+                <div class="list-book"></div>
+                <div class="list-book"></div>
+            </div>
         </div>
 
         <!-- postingan teman -->
-        <div class="post-friend"></div>
+        <div class="post-friend">
+            <!-- gambar postingan -->
+            <div class="post-friend-image">
+                <!-- gambar -->
+                <img src="<?= base_url("Img/u2.jpg");?>" alt="" class="post-fimg" id="post-fimg">
+              
+                <!-- emoticon -->
+            </div>
+
+            <!-- informasi post -->
+            <div class="post-friend-information">
+                <!-- pengguna info -->
+                <div class="user-info">
+                    <div class="user-info-img rounded-circle">
+                        <img src="<?= base_url("Img/u4.jpg");?>" alt="" class="user-post-info-img" id="user-post-info-img">
+                    </div>
+                    <div class="user-info-title">
+                        <span class="name-user-info">muhamad enggar abin pramuja</span>
+                        <a href="" class="Thislink username-info">@e.abin_51</a>
+                    </div>
+
+                    <!-- menu postigan -->
+                    <div class="post-menu">
+                        <a href="" class="Thislink icon-post-menu"><i class="fa fa-fw fa-ellipsis-h"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- deskripsi postingan -->
+                <div class="user-desc">
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, officiis laudantium. Rem odio porro tempora eos sunt totam nihil impedit harum nemo sequi! Incidunt quos ullam, iure dolor earum voluptates esse quidem dolorem similique odit minus nisi corporis. Quos, fuga! A qui iste ducimus ad beatae quia architecto itaque dicta maiores eius, cupiditate voluptatum aliquid praesentium assumenda facilis, veniam facere.
+                    </span>
+
+                    <a href="" class="Thislink more-desc">selengkapnya</a>
+                </div>
+
+                <!-- komentar -->
+                <div class="comment"></div>
+            </div>
+        </div>
     </div>
 
     <!-- informasi -->

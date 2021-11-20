@@ -94,7 +94,7 @@
                 
                 <!-- pengunjung -->
                 <div class="viewer">
-                    <span class="text-viewer">viewer</span>
+                    <span class="text-viewer">pengunjung</span>
                     <a href="" class="Thislink total-viewer">13.089</a>
                 </div>
                 
@@ -102,7 +102,7 @@
                 <div class="stalkpost">
                     <!-- penguntit -->
                     <div class="stalker">
-                        <span class="text-stalker">stalker</span>
+                        <span class="text-stalker">penguntit</span>
                         <a href="" class="Thislink total-stalker">129</a>
                     </div>
                     

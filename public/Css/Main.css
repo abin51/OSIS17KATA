@@ -1526,11 +1526,11 @@ textarea {
 
 .main-content .left-content .skill-test {
   background: rgba(20, 0, 20, .9);
-  height: 18vh;
+  height: 16vh;
   width: 131vh;
-  margin-top: .8vh;
   position: relative;
   color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.5vh;
 }
 
 .main-content .left-content .skill-test .head-nav {
@@ -1596,17 +1596,27 @@ textarea {
 }
 
 .main-content .left-content .skill-test .skill-test-content {
-  border: 1px solid #fff;
-  background: #ff0000;
-  height: 10vh;
-  width: 139vh;
+  height: 9vh;
+  width: 131vh;
+  position: absolute;
+  bottom: 0.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0.5vh;
+}
+
+.main-content .left-content .skill-test .skill-test-content .skill-content {
+  height: 8vh;
+  width: 8vh;
+  background: rgba(20, 0, 20, 0.8);
 }
 
 .main-content .left-content .books {
   background: rgba(20, 0, 20, .9);
-  height: 40vh;
+  height: 38vh;
   width: 131vh;
-  margin-top: .8vh;
+  margin-top: .5vh;
   position: relative;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -1674,12 +1684,104 @@ textarea {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.main-content .left-content .books .book-content-wrapper {
+  height: 32vh;
+  width: 131vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main-content .left-content .books .book-content-wrapper .list-book {
+  background: rgba(20, 0, 20, .8);
+  height: 30vh;
+  width: 21vh;
+}
 
 .main-content .left-content .post-friend {
   height: 65vh;
   width: 131vh;
-  margin-top: 0.8vh;
-  background: rgba(220, 220, 220, 0.6);
+  margin-top: 0.5vh;
+  background: rgba(240, 240, 240, 0.9);
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content .left-content .post-friend .post-friend-image {
+  height: 65vh;
+  width: 65vh;
+  background: rgba(200, 200, 200, .8);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content .left-content .post-friend .post-friend-image .post-fimg {
+  width: 100%;
+}
+
+.main-content .left-content .post-friend .post-friend-information {
+  height: 65vh;
+  width: 66vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5vh;
+}
+
+.main-content .left-content .post-friend .post-friend-information .user-info {
+  height: 10vh;
+  width: 65vh;
+  margin-bottom: 0.5vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main-content .left-content .post-friend .post-friend-information .user-info .user-info-img {
+  height: 9vh;
+  width: 9vh;
+  margin-right: 1vh;
+  overflow: hidden;
+}
+
+.main-content .left-content .post-friend .post-friend-information .user-info .user-info-img .user-post-info-img {
+  width: 100%;
+}
+
+.main-content .left-content .post-friend .post-friend-information .user-info .user-info-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content .left-content .post-friend .post-friend-information .user-info .post-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main-content .left-content .post-friend .post-friend-information .user-desc {
+  width: 65vh;
+  height: 35vh;
+  margin-bottom: 0.5vh;
+  background: rgba(220, 220, 220, 0.4);
+  padding: 0.5vh;
+  position: relative;
+}
+
+.main-content .left-content .post-friend .post-friend-information .user-desc .more-desc {
+  position: absolute;
+  bottom: 0.5vh;
+  left: 0.5vh;
+}
+
+.main-content .left-content .post-friend .post-friend-information .comment {
+  width: 65vh;
+  height: 18vh;
+  border: 1px solid #ff0000;
 }
 
 .main-content .right-content {
@@ -2211,7 +2313,7 @@ textarea {
   top: 0;
   left: 0.5vh;
   color: #dd4b39;
-  width: 15vh;
+  width: 19vh;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
@@ -2221,7 +2323,7 @@ textarea {
   top: 0.5vh;
   left: 0.5vh;
   color: #dd4b39;
-  width: 15vh;
+  width: 19vh;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
@@ -2229,9 +2331,9 @@ textarea {
 .main-content .user-content-wrapper .right-user-content .user-dashboard .stalkpost .total-post .text-post {
   position: absolute;
   top: .5vh;
-  right: 8.5vh;
+  right: 4.8vh;
   color: #dd4b39;
-  width: 15vh;
+  width: 19vh;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
