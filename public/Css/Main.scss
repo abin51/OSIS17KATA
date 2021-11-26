@@ -1,3 +1,26 @@
+// variabel
+$layout-bg-1: rgba(14, 0, 20, 0.6);
+$layout-bg-2: rgba(14, 0, 20, 0.6);
+$layout-bg-3: rgba(14, 0, 20, 0.6);
+$layout-bg-4: rgba(14, 0, 20, 0.6);
+$layout-bg-5: rgba(14, 0, 20, 0.6);
+$pmc-1: rgba(14, 0, 20, 0.6);
+$pmc-2: rgba(14, 0, 20, 0.6);
+$pmc-3: rgba(14, 0, 20, 0.6);
+$pmc-4: rgba(14, 0, 20, 0.6);
+$pmc-5: rgba(14, 0, 20, 0.6);
+$skc-1: rgba(14, 0, 20, 0.6);
+$skc-2: rgba(14, 0, 20, 0.6);
+$skc-3: rgba(14, 0, 20, 0.6);
+$skc-4: rgba(14, 0, 20, 0.6);
+$skc-5: rgba(14, 0, 20, 0.6);
+$gr-bg-1: rgba(14, 0, 20, 0.6);
+$gr-bg-2: rgba(14, 0, 20, 0.6);
+$gr-bg-3: rgba(14, 0, 20, 0.6);
+$gr-bg-4: rgba(14, 0, 20, 0.6);
+$gr-bg-5: rgba(14, 0, 20, 0.6);
+
+
 // css reset
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -312,10 +335,7 @@ textarea {
             }
         }
 
-        .access-button,
-        .add-post,
-        .post-menu,
-        .account {
+        .access-button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -326,7 +346,7 @@ textarea {
             font-size: 2vh;
             overflow: hidden;
             margin: 0 0.2vh;
-          }
+        }
     }
 
     .side-right-navigation {
@@ -345,6 +365,21 @@ textarea {
                 position: absolute;
                 right: 0.5vh;
             }
+        }
+
+        .add-post,
+        .post-menu,
+        .account {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(14, 0, 20, 0.6);
+            height: 5vh;
+            width: 5vh;
+            font-size: 2vh;
+            overflow: hidden;
+            margin: 0 0.2vh;
         }
 
         .account {
@@ -1922,30 +1957,30 @@ textarea {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-
-                                .user-post {
-                                    display: flex;
-                                    flex-wrap: wrap;
-                                    margin-top: 0.8vh;
-                                    width: 136vh;
-
-                                    .post {
-                                        height: 42.8vh;
-                                        width: 42.8vh;
-                                        background: rgba(220, 220, 220, 0.8);
-                                        margin-bottom: 0.68vh;
-                                        margin-right: 0.68vh;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        overflow: hidden;
-
-                                        .user-post {
-                                            width: 100%;
-                                        }
-                                    }
-                                }
                             }
+                        }
+                    }
+                }
+
+                .user-post {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-top: 0.8vh;
+                    width: 136vh;
+
+                    .post {
+                        height: 42.8vh;
+                        width: 42.8vh;
+                        background: rgba(220, 220, 220, 0.8);
+                        margin-bottom: 0.68vh;
+                        margin-right: 0.68vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+
+                        .user-post {
+                            width: 100%;
                         }
                     }
                 }

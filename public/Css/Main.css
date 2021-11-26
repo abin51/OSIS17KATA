@@ -330,10 +330,7 @@ textarea {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.navigation-menu .side-left-navigation .access-button,
-.navigation-menu .side-left-navigation .add-post,
-.navigation-menu .side-left-navigation .post-menu,
-.navigation-menu .side-left-navigation .account {
+.navigation-menu .side-left-navigation .access-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,6 +370,27 @@ textarea {
 .navigation-menu .side-right-navigation .post-menu .post-menu-right {
   position: absolute;
   right: 0.5vh;
+}
+
+.navigation-menu .side-right-navigation .add-post,
+.navigation-menu .side-right-navigation .post-menu,
+.navigation-menu .side-right-navigation .account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(14, 0, 20, 0.6);
+  height: 5vh;
+  width: 5vh;
+  font-size: 2vh;
+  overflow: hidden;
+  margin: 0 0.2vh;
 }
 
 .navigation-menu .side-right-navigation .account .user-img {
@@ -2370,7 +2388,7 @@ textarea {
           align-items: center;
 }
 
-.main-content .user-content-wrapper .left-user-content .dashboard-user-wrapper .user-profile .user-dashboard .user-nav .nav-link .user-post {
+.main-content .user-content-wrapper .left-user-content .dashboard-user-wrapper .user-post {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2380,7 +2398,7 @@ textarea {
   width: 136vh;
 }
 
-.main-content .user-content-wrapper .left-user-content .dashboard-user-wrapper .user-profile .user-dashboard .user-nav .nav-link .user-post .post {
+.main-content .user-content-wrapper .left-user-content .dashboard-user-wrapper .user-post .post {
   height: 42.8vh;
   width: 42.8vh;
   background: rgba(220, 220, 220, 0.8);
@@ -2398,7 +2416,7 @@ textarea {
   overflow: hidden;
 }
 
-.main-content .user-content-wrapper .left-user-content .dashboard-user-wrapper .user-profile .user-dashboard .user-nav .nav-link .user-post .post .user-post {
+.main-content .user-content-wrapper .left-user-content .dashboard-user-wrapper .user-post .post .user-post {
   width: 100%;
 }
 
