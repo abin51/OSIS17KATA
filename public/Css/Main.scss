@@ -1,25 +1,77 @@
 // variabel
-$layout-bg-1: rgba(14, 0, 20, 0.6);
+$layout-bg-1: rgba(20, 0, 20, 0.6);
 $layout-bg-2: rgba(14, 0, 20, 0.6);
-$layout-bg-3: rgba(14, 0, 20, 0.6);
+$layout-bg-3: rgba(20, 0, 20, 0.8);
 $layout-bg-4: rgba(14, 0, 20, 0.6);
 $layout-bg-5: rgba(14, 0, 20, 0.6);
-$pmc-1: rgba(14, 0, 20, 0.6);
-$pmc-2: rgba(14, 0, 20, 0.6);
-$pmc-3: rgba(14, 0, 20, 0.6);
-$pmc-4: rgba(14, 0, 20, 0.6);
-$pmc-5: rgba(14, 0, 20, 0.6);
-$skc-1: rgba(14, 0, 20, 0.6);
-$skc-2: rgba(14, 0, 20, 0.6);
-$skc-3: rgba(14, 0, 20, 0.6);
-$skc-4: rgba(14, 0, 20, 0.6);
-$skc-5: rgba(14, 0, 20, 0.6);
-$gr-bg-1: rgba(14, 0, 20, 0.6);
-$gr-bg-2: rgba(14, 0, 20, 0.6);
+$pmc-1: rgba(15, 0, 20, 0.6);
+$pmc-2: rgba(15, 0, 20, 0.7);
+$pmc-3: rgba(15, 0, 20, 0.8);
+$pmc-4: rgba(15, 0, 20, 0.9);
+$pmc-5: rgba(15, 0, 20, 1);
+$skc-1: rgba(255, 255, 255, 0.6);
+$skc-2: rgba(255, 255, 255, 0.7);
+$skc-3: rgba(255, 255, 255, 0.8);
+$skc-4: rgba(255, 255, 255, 0.9);
+$skc-5: rgba(255, 255, 255, 1);
+$gr-bg-1: linear-gradient(150deg,
+          rgba(232, 23, 132, 0.9) 5%,
+          rgba(104, 6, 171, 0.9) 53%,
+          rgba(55, 0, 93, 0.9) 95%);
+$gr-bg-2: linear-gradient(150deg,
+          rgba(232, 23, 132, 0.8),
+          rgba(104, 6, 171, 0.8));
 $gr-bg-3: rgba(14, 0, 20, 0.6);
 $gr-bg-4: rgba(14, 0, 20, 0.6);
 $gr-bg-5: rgba(14, 0, 20, 0.6);
 
+
+// mixin
+@mixin distype
+    (
+        $display : flex,
+        $align : center,
+        $justify : center,
+        $direction : row,
+        $position : relative
+    ) {
+    display: $display ;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin position 
+    (
+        $position : relative,
+        $top : 0,
+        $right : 0,
+        $bottom : 0,
+        $left : 0,
+    ) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin dimention 
+    (
+        $height : auto,
+        $width : auto
+    ) {
+    height: $height;
+    width: $width;
+}
+
+@mixin wrap (
+        $padding : 0 0 0 0,
+        $margin : 0 0 0 0,
+    ) {
+    padding: $padding;
+    margin: $margin;
+}
 
 // css reset
 html, body, div, span, applet, object, iframe,
@@ -35,8 +87,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
+    @include wrap();
     border: 0;
     font-size: 100%;
     font: inherit;
@@ -270,7 +321,7 @@ textarea {
     border: none;
     outline: none;
     background: none;
-  }
+}
   
 .Thislink {
     text-decoration: none;
@@ -286,63 +337,44 @@ textarea {
 
 // navigation menu
 .navigation-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
+    @include distype(flex, center, space-between );
+    @include position(fixed, 0, 0, none, 7vh);
+    @include wrap (0 0.2vh 0.2vh 1vh);
+    @include dimention (6vh);
     z-index: 6;
-    top: 0;
-    left: 7vh;
-    right: 0;
-    height: 6vh;
-    background: linear-gradient(150deg,
-    rgba(232, 23, 132, 0.9) 5%,
-    rgba(104, 6, 171, 0.9) 53%,
-    rgba(55, 0, 93, 0.9) 95%);
-    padding: 0 0.2vh 0.2vh 1vh;
+    background: $gr-bg-1;
 
     .side-left-navigation {
-        display: flex;
-        align-items: center;
+        @include distype ();
 
         .search-form {
-            display: flex;
-            align-items: center;
+            @include distype ();
+            @include dimention (5vh, 50vh);
+            @include wrap (0.5vh 0.5vh 0.5vh 1.5vh, 0 0.3vh 0 0);
             justify-content: space-between;
-            width: 50vh;
-            height: 5vh;
-            background: rgba(14, 0, 20, 0.7);
+            background: $pmc-2;
             border-radius: 6vh;
-            margin-right: 0.3vh;
-            padding: 0.5vh 0.5vh 0.5vh 1.5vh;
 
             .search-input {
-                width: 43vh;
-                height: 5vh;
-                padding-bottom: 0.5vh;
-                color: #fff;
+                @include dimention (5vh, 43vh);
+                @include wrap (0 0 0.5vh 0);
+                color: $skc-5;
             }
 
             .search-btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include distype();
+                @include dimention (4.2vh, 4.2vh);
                 border: none;
-                height: 4.2vh;
-                width: 4.2vh;
-                background: rgba(20, 0, 20, 0.8);
-                color: rgba(255, 255, 255, 0.8);
+                background: $layout-bg-3;
+                color: $skc-3;
             }
         }
 
         .access-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.8);
-            background: rgba(14, 0, 20, 0.6);
-            height: 5vh;
-            width: 5vh;
+            @include distype ();
+            @include dimention (5vh, 5vh);
+            color: $skc-3;
+            background: $pmc-1;
             font-size: 2vh;
             overflow: hidden;
             margin: 0 0.2vh;
@@ -350,33 +382,27 @@ textarea {
     }
 
     .side-right-navigation {
-        display: flex;
-        align-items: center;
+        @include distype();
 
         .post-menu {
             position: relative;
 
             .post-menu-left {
-                position: absolute;
-                left: 0.5vh;
+                @include position (absolute,  1.5vh, 0, 0, 2.1vh);
             }
-
+            
             .post-menu-right {
-                position: absolute;
-                right: 0.5vh;
+                @include position (absolute, 1.5vh, 0, 0, .4vh);
             }
         }
 
         .add-post,
         .post-menu,
         .account {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.8);
-            background: rgba(14, 0, 20, 0.6);
-            height: 5vh;
-            width: 5vh;
+            @include distype ();
+            @include dimention (5vh, 5vh);
+            color: $skc-3;
+            background: $pmc-1;
             font-size: 2vh;
             overflow: hidden;
             margin: 0 0.2vh;
@@ -394,42 +420,27 @@ textarea {
 
 // aside slide
 .aside-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include distype(flex, center, none, column);
+    @include position (fixed, 0, none, 0, 0); 
     width: 7vh;
     z-index: 8;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
     padding: 1vh 0;
     box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(150deg,
-        rgba(232, 23, 132, 0.8),
-        rgba(104, 6, 171, 0.8)
-    );
+    background: $gr-bg-2;
 
     .aside-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include distype (flex, center, none, column);
+        @include wrap (0.5vh, 0.5vh);
         width: 6vh;
-        margin-bottom: 0.5vh;
-        padding-bottom: 0.5vh;
-        border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+        border-bottom: 1.5px solid $skc-1;
     
         .aside-list-menu {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.8);
-            background: rgba(14, 0, 20, 0.6);
-            height: 5vh;
-            width: 5vh;
+            @include distype ();
+            @include dimention (5vh, 5vh);
+            color: $skc-3;
+            background: $pmc-1;
             font-size: 2.1vh;
             overflow: hidden;
-            margin: 0 0.2vh;
             border-radius: 50%;
             margin: 0.5vh 0;
         }
@@ -443,105 +454,78 @@ textarea {
 
 // main content
 .main-content {
-    position: absolute;
-    top: 6vh;
-    left: 7vh;
-    right: 0;
-    height: auto;
-    padding: 0.8vh;
-    padding-bottom: 0;
+    @include position (absolute, 6vh, 0, none, 7vh);
+    @include wrap (0.8vh 0.8vh 0 0.8vh);
+    @include dimention ();
 }
 
 // page version
 .web-version {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include distype ();
+    @include position (fixed, 0, 0, 0, 0);
     background: #D4ECDD;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
 
     .web-content {
-        height: 80vh;
-        width: 160vh;
+        @include dimention (80vh, 160vh);
         position: relative;
         background: #FEFBF3;
         border: .2px solid #eee;
         overflow: auto;
 
         .nav-version {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            @include position(absolute, 0, 0, 0,0 );
+            @include distype (flex, center, space-between);
             height: 6vh;
             background: #00A19D;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             padding: .5vh;
 
             .back-to-page {
-                height: 5vh;
-                width: 5vh;
-                color: rgba(255, 255, 255, 0.8);
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include dimention (5vh, 5vh);
+                @include distype ();
+                color: $skc-3;
                 transition: .5s;
             }
 
             .back-to-page:hover {
-                background: rgba(20, 0, 20, 0.5);
+                background: $layout-bg-1;
             }
 
             .page-menu {
                 display: flex;
 
                 .list-page {
-                    height: 6vh;
-                    width: auto;
+                    @include distype ();
+                    @include dimention (6vh);
                     margin-left: 0.2vh;
                     padding: 0 .8vh;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: rgba(255, 255, 255, 0.8);
+                    color: $skc-3;
                     transition: .5s;
                 }
 
                 .list-page:hover {
-                    background: rgba(20, 0, 20, 0.5);
+                    background: $layout-bg-1;
                 }
             }
         }
 
         .version-content {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 6vh;
+            @include position (absolute, 6vh, 0, none, 0);
             height: auto;
 
             .logo-osis {
-                height: 20vh;
-                width: 150;
+                @include dimention (20vh, 150vh);
                 margin-top: 2vh;
                 display: flex;
                 justify-content: center;
 
                 .osis-logo {
                     height: 100%;
-                  }
+                }
             }
 
             .information-page {
+                @include dimention ();
                 margin-top: 2vh;
-                height: auto;
-                width: auto;
                 padding: 1vh;
             }
         }
@@ -551,28 +535,18 @@ textarea {
 
 // login wrapper
 .login-wrapper {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    @include distype (fixed, 0, 0, 0, 0);
 
     .login {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include distype (flex, center, none, column);
+        @include position (fixed, 0, none, 0, 0);
         width: 40vh;
         z-index: 3;
-        position: fixed;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        background: rgba(14, 0, 20, 0.7);
+        background: $pmc-2;
         box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
 
         .osis-img {
-            height: 20vh;
-            width: 20vh;
+            @include dimention (20vh, 20vh);
             margin: 2vh 0;
 
             .osis-image {
@@ -591,65 +565,51 @@ textarea {
         }
           
         .form-login {
+            @include distype (flex, center, none, column);
             width: 40vh;
             margin-bottom: 5vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
 
             .name,
             .email,
             .code,
             .pass {
-                background: rgba(20, 0, 20, 0.8);
+                @include distype(flex, center, center);
+                @include wrap (0 1vh 0.4vh 1vh, 1vh 0 0 0);
+                @include dimention (5vh, 36vh);
+                background: $layout-bg-3;
                 border-radius: 5vh;
-                padding: 0 1vh 0.4vh 1vh;
-                margin-top: 1vh;
-                display: flex;
-                align-items: center;
-                width: 36vh;
-                height: 5vh;
                 color: #fff;
             }
 
             .forget-login {
+                @include distype (flex, center, none, space-between);
                 width: 35vh;
                 margin-top: 1vh;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
 
                 .login-btn {
+                    @include dimention(5vh, 13vh);
                     background: #e02401;
                     text-transform: capitalize;
                     letter-spacing: 1px;
                     color: #fff;
                     border: none;
-                    height: 5vh;
-                    width: 13vh;
                     border-radius: 0.5vh;
                 }
 
                 .forget-link {
-                    color: rgba(255, 255, 255, 0.6);
+                    color: $skc-1;
                     letter-spacing: 0.8px;
-                  }
+                }
             }
         }
 
         .login-with {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            width: 35vh;
-            height: auto;
+            @include distype (flex, start, space-between);
+            @include dimention (auto, 35vh);
 
             .login-with-icon {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 6vh;
-                width: 6vh;
+                @include distype ();
+                @include dimention (6vh, 6vh);
                 color: #fff;
                 font-size: 3vh;
                 margin-bottom: 4vh;
@@ -683,12 +643,8 @@ textarea {
         }
 
         .bottom-information {
-            position: absolute;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include position (absolute, none, 0, none, none);
+            @include distype ();
             width: 40vh;
             padding: 1vh;
 
