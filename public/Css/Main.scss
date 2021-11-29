@@ -2,7 +2,7 @@
 $layout-bg-1: rgba(20, 0, 20, 0.6);
 $layout-bg-2: rgba(14, 0, 20, 0.6);
 $layout-bg-3: rgba(20, 0, 20, 0.8);
-$layout-bg-4: rgba(14, 0, 20, 0.6);
+$layout-bg-4: rgba(20, 0, 20, 0.9);
 $layout-bg-5: rgba(14, 0, 20, 0.6);
 $pmc-1: rgba(15, 0, 20, 0.6);
 $pmc-2: rgba(15, 0, 20, 0.7);
@@ -33,7 +33,6 @@ $gr-bg-5: rgba(14, 0, 20, 0.6);
         $align : center,
         $justify : center,
         $direction : row,
-        $position : relative
     ) {
     display: $display ;
     align-items: $align;
@@ -535,7 +534,7 @@ textarea {
 
 // login wrapper
 .login-wrapper {
-    @include distype (fixed, 0, 0, 0, 0);
+    @include position (fixed, 0, 0, 0, 0);
 
     .login {
         @include distype (flex, center, none, column);
@@ -763,7 +762,7 @@ textarea {
         }
 
         .text-information {
-            @include distype (fixed, none, none, 0.8vh, 40.8vh);
+            @include position (fixed, none, none, 0.8vh, 40.8vh);
             @include distype (flex, none, none, column);
             z-index: 3;
             color: $skc-3;
@@ -1101,77 +1100,47 @@ textarea {
 .main-content {
 
     .left-content {
-        height: auto;
-        width: 131.5vh;
+        @include dimention (auto, 131.5vh);
 
         .status-friends {
-            height: 8vh;
-            width: 131vh;
-            position: relative;
+            @include dimention (8vh, 31vh);
+            @include position ();
+            @include distype ();
             overflow: hidden;
             padding: 0.5vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             
             .s-friend-left {
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
+                @include position (absolute, 0, none, 0, 0);
+                @include dimention (8vh, 8vh);
+                @include distype ();
                 z-index: 1;
-                height: 8vh;
-                width: 8vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 color: #ff8243;
                 background: #fff;
             }
             
             .s-friend-right {
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
+                @include position (absolute, 0, 0, 0, none);
+                @include dimention (8vh, 8vh);
+                @include distype();
                 z-index: 1;
-                height: 8vh;
-                width: 8vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 color: #ff8243;
                 background: #fff;
             }
             
             .status-friend-content {
-                width: auto;
-                height: 8vh;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 8vh;
-                display: flex;
-                align-items: center;
+                @include dimention (8vh);
+                @include position (absolute, 0, none, 0, 0);
+                @include distype(flex, center, none,);
                 
                 .status-wrapper {
-                    height: 8vh;
-                    width: 8vh;
+                    @include dimention (8vh, 8vh);
+                    @include distype ();
                     margin-right: .85vh;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: rgb(232, 23, 132);
-                    background: linear-gradient(150deg,
-                    rgba(232, 23, 132, 0.9) 5%,
-                    rgba(104, 6, 171, 0.9) 53%,
-                    rgba(55, 0, 93, 0.9) 95%
-                    );
+                    background: $gr-bg-1;
                     
                     .friend-img {
-                        background: rgba(255, 255, 255, 0.8);
-                        height: 7.2vh;
-                        width: 7.2vh;
+                        @include dimention (7.2vh, 7.2vh);
+                        background: $skc-3;
                         overflow: hidden;
                         
                         .user-status-img {
@@ -1183,13 +1152,10 @@ textarea {
         }
                 
         .main-information-content {
-            height: 70vh;
-            width: 131vh;
+            @include dimention (70vh, 131vh);
+            @include distype();
             margin-top: .8vh;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             filter: brightness(60%);
             background: rgba(220, 220, 220, 0.6);
 
@@ -1199,42 +1165,32 @@ textarea {
         }
 
         .skill-test {
-            background: rgba(20, 0, 20, .9);
-            height: 16vh;
-            width: 131vh;
+            @include dimention (16vh, 131vh);
+            background: $layout-bg-4;
+            color: $skc-3;
             position: relative;
-            color: rgba(255, 255, 255, 0.8);
             margin-top: 0.5vh;
 
             .head-nav {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
+                @include position (absolute, 0, 0, none, 0);
+                @include distype (flex, center, space-between);
                 border-bottom: 2px solid #ff8243;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 margin: 0 .8vh;
                 height: 6vh;
 
                 .view-menu {
-                    display: flex;
-                    align-items: center;
+                    @include distype (flex, center, none);
 
                     .view-1, 
                     .view-2, 
                     .view-3 {
-                        height: 4vh;
-                        width: 4vh;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        @include dimention (4vh, 4vh);
+                        @include distype ();
                         overflow: hidden;
                         margin-left: 0.5vh;
 
                         a {
-                            color: rgba(255, 255, 255, 0.8);
+                            color: $skc-3;
                         }
                     }
 
@@ -1243,13 +1199,11 @@ textarea {
                         position: relative;
 
                         .linkmenu1 {
-                            position: absolute;
-                            top: .5vh;
+                            @include position (absolute, .5vh, none, none, none);
                         }
 
                         .linkmenu2 {
-                            position: absolute;
-                            bottom: .7vh;
+                            @include position (absolute, none, none, .7vh, none);
                         }
                     }
 
@@ -1258,73 +1212,56 @@ textarea {
                         position: relative;
 
                         .linkmenu1 {
-                            position: absolute;
-                            top: -.8vh;
+                            @include position (absolute, -.8vh, none, none, none);
                         }
 
                         .linkmenu2 {
-                            position: absolute;
-                            bottom: -.7vh;
+                            @include position (absolute, .5vh, none, -.7vh, none);
                         }
                     }
                 }
             }
 
             .skill-test-content {
-                height: 9vh;
-                width: 131vh;
-                position: absolute;
-                bottom: 0.5vh;
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
+                @include dimention(9vh, 131vh);
+                @include position (absolute, none, none, .5vh, none);
+                @include distype (flex, center, space-evenly);
                 padding: 0 0.5vh;
 
                 .skill-content {
-                    height: 8vh;
-                    width: 8vh;
-                    background: rgba(20, 0, 20, 0.8);
+                    @include dimention(8vh, 8vh);
+                    background: $layout-bg-3;
                 }
             }
         }
 
         .books {
-            background: rgba(20, 0, 20, .9);
-            height: 38vh;
-            width: 131vh;
+            @include dimention(38vh, 131vh);
+            background: $layout-bg-4;
             margin-top: .5vh;
             position: relative;
-            color: rgba(255, 255, 255, 0.8);
+            color: $skc-3;
 
             .head-nav {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
+                @include position (absolute, 0, 0, none, 0);
+                @include distype (flex, center, space-between);
                 border-bottom: 2px solid #ff8243;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 margin: 0 .8vh;
                 height: 6vh;
 
                 .view-menu {
-                    display: flex;
-                    align-items: center;
+                    @include distype (flex, center, none);
 
                     .view-1, 
                     .view-2, 
                     .view-3 {
-                        height: 4vh;
-                        width: 4vh;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        @include dimention (4vh, 4vh);
+                        @include distype();
                         overflow: hidden;
                         margin-left: 0.5vh;
 
                         a {
-                            color: rgba(255, 255, 255, 0.8);
+                            color: $skc-3;
                         }
                     }
 
@@ -1333,13 +1270,11 @@ textarea {
                         position: relative;
 
                         .linkmenu1 {
-                            position: absolute;
-                            top: .5vh;
+                            @include position(absolute, .5vh, none, none, none);
                         }
 
                         .linkmenu2 {
-                            position: absolute;
-                            bottom: .7vh;
+                            @include position(absolute, none, none, .7vh, none);
                         }
                     }
 
@@ -1348,13 +1283,11 @@ textarea {
                         position: relative;
 
                         .linkmenu1 {
-                            position: absolute;
-                            top: -.7vh;
+                            @include position(absolute, -.7vh, none, none, none);
                         }
 
                         .linkmenu2 {
-                            position: absolute;
-                            bottom: -.7vh;
+                            @include position(absolute, .5vh, none, -.7vh, none);
                         }
                     }
                 }
@@ -1362,21 +1295,16 @@ textarea {
         }
 
         .post-friend {
-            height: 65vh;
-            width: 131vh;
+            @include dimention (65vh, 131vh);
+            @include distype(flex, none, space-between,);
             margin-top: 0.5vh;
-            background: rgba(240, 240, 240, 0.9);
-            display: flex;
-            justify-content: space-between;
+            background: $skc-4;
 
             .post-friend-image {
-                height: 65vh;
-                width: 65vh;
+                @include dimention (65vh, 65vh);
+                @include distype();
                 background: rgba(200, 200, 200, .8);
                 overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
 
                 .post-fimg {
                     width: 100%;
@@ -1384,24 +1312,19 @@ textarea {
             }
 
             .post-friend-information {
-                height: 65vh;
-                width: 66vh;
+                @include dimention (65vh, 66vh);
+                @include distype(flex, none, none, column);
                 position: relative;
-                display: flex;
-                flex-direction: column;
                 padding: 0.5vh;
 
                 .user-info {
-                    height: 10vh;
-                    width: 65vh;
+                    @include dimention (10vh, 65vh);
+                    @include distype(flex, center, none);
                     margin-bottom: 0.5vh;
                     position: relative;
-                    display: flex;
-                    align-items: center;
 
                     .user-info-img {
-                        height: 9vh;
-                        width: 9vh;
+                        @include dimention(9vh, 9vh);
                         margin-right: 1vh;
                         overflow: hidden;
 
@@ -1416,30 +1339,23 @@ textarea {
                     }
 
                     .post-menu {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
+                        @include position (absolute, 0, 0, none, none);
                     }
                 }
 
                 .user-desc {
-                    width: 65vh;
-                    height: 35vh;
-                    margin-bottom: 0.5vh;
+                    @include dimention(35vh, 65vh);
+                    @include wrap (0.5vh 0.5vh 0.5vh 0.5vh, 0 0 0.5vh 0);
                     background: rgba(220, 220, 220, 0.4);
-                    padding: 0.5vh;
                     position: relative;
 
                     .more-desc {
-                        position: absolute;
-                        bottom: 0.5vh;
-                        left: 0.5vh;
+                        @include position(absolute, none, none, 0.5vh, 0.5vh);
                     }
                 }
 
                 .comment {
-                    width: 65vh;
-                    height: 18vh;
+                    @include dimention (18vh, 65vh);
                     border: 1px solid #ff0000;
                 }
             }
@@ -1447,31 +1363,23 @@ textarea {
     }
 
     .right-content {
-        position: fixed;
+        @include position(fixed, 6vh, 0, 0, none);
         width: 50.5vh;
-        top: 6vh;
-        right: 0;
-        bottom: 0;
         padding: 0.5vh;
 
         .clock-wrapper {
-            background: rgba(20, 0, 20, 0.8);
+            background: $layout-bg-3;
             color: #ff8243;
             padding: 0.5vh;
             position: relative;
 
             .clock-content {
-                display: flex;
-                justify-content: space-between;
+                @include distype(flex, none, space-between);
 
                 .clock {
+                    @include distype(flex, center, center, column);
+                    @include dimention (10vh, 35vh);
                     background: rgba(20, 0, 20, 0.5);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    height: 10vh;
-                    width: 35vh;
                     padding-top: 1vh;
                     font-size: 4vh;
                     letter-spacing: 2px;
@@ -1483,37 +1391,27 @@ textarea {
                 }
 
                 .weather-wrapper {
+                    @include dimention(14.5vh, 12.4vh);
+                    @include distype(flex, center, none, column);
                     background: rgba(20, 0, 20, 0.5);
-                    height: 14.5vh;
-                    width: 12.4vh;
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
                     position: relative;
 
                     .weather {
-                        position: absolute;
-                        top: 1vh;
+                        @include position(absolute, 1vh, none, none, none);
                         font-size: 5vh;
                     }
 
                     .temperature {
-                        position: absolute;
-                        bottom: 0.8vh;
+                        @include position(absolute, 0, none, 0.8vh, none);
                     }
                 }
             }
 
             .clock-we {
-                color: rgba(255, 255, 255, 0.8);
-                position: absolute;
-                left: 0.5vh;
-                bottom: 0.5vh;
-                height: 4vh;
-                width: 4vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include position (absolute, none, none, .5vh, .5vh);
+                @include dimention (4vh, 4vh);
+                @include distype();
+                color: $skc-3;
                 transition: 0.5s;
                 background: rgba(20, 0, 20, 0.5);
             }
@@ -1523,18 +1421,13 @@ textarea {
             }
 
             .location-we {
-                color: rgba(255, 255, 255, 0.8);
-                position: absolute;
-                left: 5vh;
-                bottom: 0.5vh;
-                height: 4vh;
-                width: 30.5vh;
+                @include dimention (4vh, 30.5vh);
+                @include distype ();
+                @include position (absolute, none, none, .5vh, 5vh);
+                color: $skc-3;
                 border-radius: 5vh;
                 padding: 0 1vh 0 0.5vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: rgba(20, 0, 20, 0.5);
+                background: $layout-bg-1;
             }
         }
     }
@@ -1545,58 +1438,42 @@ textarea {
 .main-content {
 
     .top-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include distype (flex, center, space-between);
         margin-bottom: 0.5vh;
 
         .landscape-content {
+            @include distype ();
+            @include dimention (70vh, 120vh);
             background: rgba(220, 220, 220, 0.5);
-            height: 70vh;
-            width: 120vh;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
             .post-image {
-                width: 100%;
-                height: 100%;
+                @include dimention (100%, 100%);
             }
         }
 
         .article-content {
+            @include dimention(70vh, 60vh);
             background: rgba(220, 220, 220, 0.5);
-            height: 70vh;
-            width: 60vh;
         }
     }
 
     .down-content {
-        height: auto;
-        width: 180.8vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include dimention (auto, 180.8vh);
+        @include distype(flex, center, space-between);
 
         .potrait-wrapper {
-            height: auto;
-            width: 90.1vh;
+            @include dimention (auto, 90.1vh);
+            @include distype(flex, center, space-between);
             margin-bottom: 0.3vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
 
             .left-wrapper-content {
 
                 .left-potrait {
+                    @include dimention (70vh, 44.7vh);
+                    @include distype ();
                     background: rgba(220, 220, 220, 0.5);
-                    width: 44.7vh;
-                    height: 70vh;
                     overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
 
                     .post-image {
                         height: 100%;
@@ -1604,14 +1481,11 @@ textarea {
                 }
 
                 .mini-content-1 {
-                    height: 44.7vh;
-                    width: 44.7vh;
+                    @include dimention (44.7vh, 44.7vh);
+                    @include distype ();
                     background: rgba(220, 220, 220, 0.5);
                     border-top: 5px solid #fff;
                     overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
 
                     .post-image {
                         width: 100%;
@@ -1622,13 +1496,10 @@ textarea {
             .right-wrapper-content {
 
                 .right-potrait {
+                    @include dimention (70vh, 44.7vh);
+                    @include distype ();
                     background: rgba(220, 220, 220, 0.5);
-                    width: 44.7vh;
-                    height: 70vh;
                     overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
 
                     .post-image {
                         height: 100%;
@@ -1636,14 +1507,11 @@ textarea {
                 }
 
                 .mini-content-2 {
-                    height: 44.7vh;
-                    width: 44.7vh;
+                    @include dimention (70vh, 44.7vh);
+                    @include distype ();
                     background: rgba(220, 220, 220, 0.5);
                     border-bottom: 5px solid #fff;
                     overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center; 
 
                     .post-image {
                         width: 100%;
@@ -1658,44 +1526,33 @@ textarea {
 .main-content {
 
     .user-bg {
+        @include position(absolute, 0, 0, none, 0);
         background: rgba(220, 220, 220, 0.5);
         height: 50vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
         box-shadow: inset 0 0 6px 1px #ddd;
 
         .code-id {
-            position: absolute;
-            left: 37vh;
-            top: 44.2vh;
+            @include position (absolute, 44.2vh, none, none, 37vh);
+            @include wrap ();
             z-index: 1;
-            background: rgba(14, 0, 20, 0.6);
+            background: $pmc-1;
             color: rgba(220, 220, 220, 0.8);
-            height: auto;
-            width: auto;
             padding: 5px;
         }
 
         .social-media {
-            position: absolute;
-            right: .6vh;
-            top: 44.2vh;
+            @include dimention ();
+            @include position (absolute, 44.2vh, .6vh, none, none);
             z-index: 1;
-            background: rgba(14, 0, 20, 0.6);
+            background: $pmc-1;
             color: rgba(220, 220, 220, 0.8);
-            height: auto;
-            width: auto;
             padding: 5px;
         }
 
         .user-bg-image {
+            @include distype ();
             height: 50vh;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             filter: brightness(60%);
 
             .bg-image {
@@ -1705,34 +1562,25 @@ textarea {
     }
 
     .user-content-wrapper {
-        display: flex;
-        justify-content: space-between;
+        @include distype (flex, none, space-between);
         margin-top: 50vh;
 
         .left-user-content {
 
             .dashboard-user-wrapper {
-                height: auto;
-                width: 130vh;
+                @include dimention(auto, 130vh);
 
                 .user-profile {
-                    height: 28vh;
-                    width: 130vh;
+                    @include dimention(28vh, 130vh);
+                    @include distype(flex, center, space-between);
                     position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
 
                     .user-image {
+                        @include dimention (35vh, 35vh);
+                        @include distype ();
+                        @include position (absolute, -8vh, none, none, none);
                         background: rgba(220, 220, 220, 0.8);
-                        height: 35vh;
-                        width: 35vh;
-                        position: absolute;
                         overflow: hidden;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        top: -8vh;
 
                         .user-img {
                             width: 100%;
@@ -1746,29 +1594,21 @@ textarea {
                         }
 
                         label {
-                            position: absolute;
-                            top: 23vh;
-                            left: 29vh;
-                            height: 4vh;
-                            width: 4vh;
-                            background: rgba(20, 0, 20, 0.8);
+                            @include distype ();
+                            @include position (absolute, 23vh, none, none, 29vh);
+                            @include dimention (4vh, 4vh);
+                            background: $layout-bg-3;
                             color: rgba(220, 220, 220, 0.8);
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
                         }
                     }
 
                     
                     .user-dashboard {
-                        height: 28vh;
-                        width: 94vh;
+                        @include dimention(28vh, 94vh);
                         position: relative;
 
                         .u-set {
-                            position: absolute;
-                            top: 0.5vh;
-                            right: 0.5vh;
+                            @include position(absolute, .5vh, .6vh, none, none);
                         }
 
                         .user-dashboard-information {
@@ -1795,23 +1635,15 @@ textarea {
                         }
 
                         .user-nav {
-                            position: absolute;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
+                            @include position(absolute, none, 0, 0, 0);
+                            @include distype(flex, center, space-between);
                             height: 6vh;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
 
                             .nav-link {
-                                background: rgba(14, 0, 20, 0.8);
+                                @include distype ();
+                                @include dimention (6vh, 23vh);
+                                background: $pmc-3;
                                 color: rgba(255, 255, 255, 0.6);
-                                height: 6vh;
-                                width: 23vh;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
                             }
                         }
                     }
@@ -1824,14 +1656,11 @@ textarea {
                     width: 136vh;
 
                     .post {
-                        height: 42.8vh;
-                        width: 42.8vh;
+                        @include dimention(42.8vh, 42.8vh);
+                        @include distype ();
                         background: rgba(220, 220, 220, 0.8);
                         margin-bottom: 0.68vh;
                         margin-right: 0.68vh;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         overflow: hidden;
 
                         .user-post {
@@ -1843,45 +1672,32 @@ textarea {
         } 
 
         .right-user-content {
-            height: 71.5vh;
-            width: 50.2vh;
+            @include dimention (71.5vh, 50.2vh);
 
             .user-dashboard {
-                width: 50.2vh;
-                height: 28vh;
+                @include dimention(28vh, 50.2vh);
+                @include distype(flex, center, center, column);
                 background: rgba(20, 0, 20, 0.8);
                 position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
 
                 .info-dashboard {
-                    position: absolute;
-                    right: .8vh;
-                    top: 0.5vh;
-                    color: rgba(255, 255, 255, 0.9);
+                    @include position (absolute, .5vh, .8vh, none, none);
+                    color: $skc-4;
                     z-index: 2;
                 }
 
                 .viewer {
-                    height: 15.7vh;
-                    width: 49vh;
-                    position: absolute;
-                    top: .3vh;
-                    background: rgba(20, 0, 20, 0.6);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include dimention(15.7vh, 49vh);
+                    @include distype ();
+                    @include position(absolute, .3vh, none, none, none);
+                    background: $layout-bg-1;
 
                     .text-viewer {
-                        position: absolute;
-                        top: 0;
-                        left: 0.5vh;
+                        @include position(absolute, 0, none, none, .5vh);
                         color: #dd4b39;
                         width: 19vh;
                         text-transform: uppercase;
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+                        border-bottom: 1px solid $skc-1;
                     }
 
                     .total-viewer {
@@ -1890,30 +1706,23 @@ textarea {
                 }
 
                 .stalkpost {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
+                    @include distype(flex, center, space-between);
                     width: 49vh;
                     position: absolute;
                     bottom: 0.5vh;
 
                     .stalker {
-                        width: 24.2vh;
-                        height: 11vh;
+                        @include dimention(11vh, 24.1vh);
+                        @include distype();
                         margin-top: 1vh;
                         background: rgba(20, 0, 20, 0.6);
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
 
                         .text-stalker {
-                            position: absolute;
-                            top: 0.5vh;
-                            left: 0.5vh;
+                            @include position(absolute, .5vh, none, none, .5vh);
                             color: #dd4b39;
                             width: 19vh;
                             text-transform: uppercase;
-                            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+                            border-bottom: 1px solid $skc-1;
                         } 
 
                         .total-stalker {
@@ -1922,22 +1731,17 @@ textarea {
                     }
 
                     .total-post {
-                        width: 24.2vh;
-                        height: 11vh;
+                        @include dimention(11vh, 24.2vh);
+                        @include distype();
                         margin-top: 1vh;
-                        background: rgba(20, 0, 20, 0.6);
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        background: $layout-bg-1;
 
                         .text-post {
-                            position: absolute;
-                            top: .5vh;
-                            right: 4.8vh;
+                            @include position(absolute, .5vh, 4.8vh, none, none);
                             color: #dd4b39;
                             width: 19vh;
                             text-transform: uppercase;
-                            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+                            border-bottom: 1px solid $skc-1;
                         }
 
                         .post-total {
@@ -1960,8 +1764,7 @@ textarea {
                 }
 
                 .list-information-school {
-                    width: 50.2vh;
-                    height: 12.38vh;
+                    @include dimention (12.38vh, 50.2vh);
                     background: rgba(20, 0, 20, 0.8);
                     margin-bottom: 0.5vh;
                 }
@@ -1975,79 +1778,57 @@ textarea {
 .main-content {
 
     .chat-left-content {
-        position: fixed;
-        left: 7vh;
-        top: 6vh;
-        bottom: 0;
+        @include position (fixed, 6vh, none, 0, 7vh);
         z-index: 1;
         background: rgba(220, 220, 220, 0.5);
         width: 51.5vh;
     }
 
     .chat-right-content {
-        position: absolute;
-        top: 0;
-        left: 51.5vh;
-        right: 0;
+        @include position (absolute 0, 0, none, 51.5vh);
         min-height: 100vh;
 
         .navigation-chat {
-            position: fixed;
-            bottom: 0.8vh;
-            right: 0.8vh;
-            left: 59vh;
+            @include position(fixed, none, .8vh, .8vh, 59vh);
+            @include distype(flex, center, space-between);
             height: 7vh;
             padding: 0.5vh;
             border-radius: 8vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
 
             .add-doc {
+                @include dimention(6vh, 6vh);
+                @include distype ();
                 border: none;
-                background: rgba(20, 0, 20, 0.8);
-                color: rgba(255, 255, 255, 0.8);
-                height: 6vh;
-                width: 6vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                background: $layout-bg-3;
+                color: $skc-3;
             }
 
             .chat-user {
-                display: flex;
-                align-items: center;
+                @include distype(flex, center, none);
               
                 .img {
                     display: none;
                 }
 
                 label {
-                    background: rgba(20, 0, 20, 0.8);
-                    color: rgba(255, 255, 255, 0.8);
-                    height: 6vh;
-                    width: 6vh;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include dimention(6vh, 6vh);
+                    @include distype();
+                    background: $layout-bg-1;
+                    color: $skc-3;
                 }
 
                 .text-chat {
-                    height: 6vh;
-                    width: 124.2vh;
+                    @include dimention(6vh, 124.2vh);
                     background: rgba(220, 220, 220, 0.6);
                     padding-left: 2vh;
                     border-radius: 6vh;
                 }
 
                 .send {
-                    background: rgba(20, 0, 20, 0.8);
-                    color: rgba(255, 255, 255, 0.8);
-                    height: 6vh;
-                    width: 6vh;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include dimention (6vh, 6vh);
+                    @include distype();
+                    background: $layout-bg-3;
+                    color: $skc-3;
                     border: none;
                 }
             } 
