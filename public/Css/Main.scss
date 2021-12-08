@@ -642,8 +642,8 @@ textarea {
         }
 
         .bottom-information {
-            @include position (absolute, none, 0, none, none);
-            @include distype ();
+            @include position (absolute, none, none, 0, none);
+            @include distype (flex, center, center, column);
             width: 40vh;
             padding: 1vh;
 
@@ -1103,7 +1103,7 @@ textarea {
         @include dimention (auto, 131.5vh);
 
         .status-friends {
-            @include dimention (8vh, 31vh);
+            @include dimention (8vh, 131vh);
             @include position ();
             @include distype ();
             overflow: hidden;
@@ -1836,3 +1836,70 @@ textarea {
     }
 } 
     
+// ukuran mobile
+@media only screen and (max-width:400px) {
+    // login
+    .login-wrapper {
+        position: relative;
+
+        .login {
+            display: none;
+        }
+
+        .school-information {
+    
+            .logo {
+                @include position (fixed, 1vh, none, none, 1vh);
+                @include dimention (6vh, 6vh);
+    
+                .logo-img {
+                    width: 100%;
+                }
+    
+                .text-logo {
+    
+                    .name-img {
+                        @include position (fixed, 1.5vh, none, none, 8vh);
+                        font-size: 2vh;
+                    }
+    
+                    .name-school {
+                        @include position (fixed, 6.8vh, none, none, 8vh);
+                        margin-top: -3vh;
+                        font-size: 1.5vh;
+                      }
+                }
+            }
+    
+            .slider-information-wrapper {
+                display: none;
+            }
+    
+            .information {
+    
+                .bg-image {
+    
+                    .bg-soe {
+                        @include position (absolute, 0, 0, 0, 0);
+                        height: 100%;
+                        z-index: 1;
+                    }
+                }
+            }
+    
+            .text-information {
+                @include position (fixed, none, none, 1vh, .8vh);
+                width: 68vh;
+    
+                .title-information {
+                    font-size: 5vh;
+                    text-transform: capitalize;
+                }
+    
+                .main-information-excul {
+                    font-size: 2vh;
+                }
+            }
+        }
+    }
+}
