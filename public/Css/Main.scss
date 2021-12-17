@@ -14,10 +14,7 @@ $skc-2: rgba(255, 255, 255, 0.7);
 $skc-3: rgba(255, 255, 255, 0.8);
 $skc-4: rgba(255, 255, 255, 0.9);
 $skc-5: rgba(255, 255, 255, 1);
-$gr-bg-1: linear-gradient(150deg,
-          rgba(232, 23, 132, 0.9) 5%,
-          rgba(104, 6, 171, 0.9) 53%,
-          rgba(55, 0, 93, 0.9) 95%);
+$gr-bg-1: rgba(14, 0, 20, 0.6);
 $gr-bg-2: linear-gradient(150deg,
           rgba(232, 23, 132, 0.8),
           rgba(104, 6, 171, 0.8));
@@ -426,6 +423,7 @@ textarea {
     padding: 1vh 0;
     box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.4);
     background: $gr-bg-2;
+    display: none;
 
     .aside-menu {
         @include distype (flex, center, none, column);
@@ -453,7 +451,7 @@ textarea {
 
 // main content
 .main-content {
-    @include position (absolute, 6vh, 0, none, 7vh);
+    @include position (absolute, 0, 0, none, 0);
     @include wrap (0.8vh 0.8vh 0 0.8vh);
     @include dimention ();
 }
@@ -1837,69 +1835,69 @@ textarea {
 } 
     
 // ukuran mobile
-@media only screen and (max-width:400px) {
-    // login
-    .login-wrapper {
-        position: relative;
+// @media only screen and (max-width:400px) {
+//     // login
+//     .login-wrapper {
+//         position: relative;
 
-        .login {
-            display: none;
-        }
+//         .login {
+//             display: none;
+//         }
 
-        .school-information {
+//         .school-information {
     
-            .logo {
-                @include position (fixed, 1vh, none, none, 1vh);
-                @include dimention (6vh, 6vh);
+//             .logo {
+//                 @include position (fixed, 1vh, none, none, 1vh);
+//                 @include dimention (6vh, 6vh);
     
-                .logo-img {
-                    width: 100%;
-                }
+//                 .logo-img {
+//                     width: 100%;
+//                 }
     
-                .text-logo {
+//                 .text-logo {
     
-                    .name-img {
-                        @include position (fixed, 1.5vh, none, none, 8vh);
-                        font-size: 2vh;
-                    }
+//                     .name-img {
+//                         @include position (fixed, 1.5vh, none, none, 8vh);
+//                         font-size: 2vh;
+//                     }
     
-                    .name-school {
-                        @include position (fixed, 6.8vh, none, none, 8vh);
-                        margin-top: -3vh;
-                        font-size: 1.5vh;
-                      }
-                }
-            }
+//                     .name-school {
+//                         @include position (fixed, 6.8vh, none, none, 8vh);
+//                         margin-top: -3vh;
+//                         font-size: 1.5vh;
+//                       }
+//                 }
+//             }
     
-            .slider-information-wrapper {
-                display: none;
-            }
+//             .slider-information-wrapper {
+//                 display: none;
+//             }
     
-            .information {
+//             .information {
     
-                .bg-image {
+//                 .bg-image {
     
-                    .bg-soe {
-                        @include position (absolute, 0, 0, 0, 0);
-                        height: 100%;
-                        z-index: 1;
-                    }
-                }
-            }
+//                     .bg-soe {
+//                         @include position (absolute, 0, 0, 0, 0);
+//                         height: 100%;
+//                         z-index: 1;
+//                     }
+//                 }
+//             }
     
-            .text-information {
-                @include position (fixed, none, none, 1vh, .8vh);
-                width: 68vh;
+//             .text-information {
+//                 @include position (fixed, none, none, 1vh, .8vh);
+//                 width: 68vh;
     
-                .title-information {
-                    font-size: 5vh;
-                    text-transform: capitalize;
-                }
+//                 .title-information {
+//                     font-size: 5vh;
+//                     text-transform: capitalize;
+//                 }
     
-                .main-information-excul {
-                    font-size: 2vh;
-                }
-            }
-        }
-    }
-}
+//                 .main-information-excul {
+//                     font-size: 2vh;
+//                 }
+//             }
+//         }
+//     }
+// }

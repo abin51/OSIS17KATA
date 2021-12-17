@@ -283,7 +283,7 @@ textarea {
   height: 6vh;
   width: auto;
   z-index: 6;
-  background: linear-gradient(150deg, rgba(232, 23, 132, 0.9) 5%, rgba(104, 6, 171, 0.9) 53%, rgba(55, 0, 93, 0.9) 95%);
+  background: rgba(14, 0, 20, 0.6);
 }
 
 .navigation-menu .side-left-navigation {
@@ -469,6 +469,7 @@ textarea {
   -webkit-box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.4);
           box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.4);
   background: linear-gradient(150deg, rgba(232, 23, 132, 0.8), rgba(104, 6, 171, 0.8));
+  display: none;
 }
 
 .aside-slide .aside-menu {
@@ -521,10 +522,10 @@ textarea {
 
 .main-content {
   position: absolute;
-  top: 6vh;
+  top: 0;
   right: 0;
   bottom: none;
-  left: 7vh;
+  left: 0;
   padding: 0.8vh 0.8vh 0 0.8vh;
   margin: 0 0 0 0;
   height: auto;
@@ -1752,7 +1753,7 @@ textarea {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-right: .85vh;
-  background: linear-gradient(150deg, rgba(232, 23, 132, 0.9) 5%, rgba(104, 6, 171, 0.9) 53%, rgba(55, 0, 93, 0.9) 95%);
+  background: rgba(14, 0, 20, 0.6);
 }
 
 .main-content .left-content .status-friends .status-friend-content .status-wrapper .friend-img {
@@ -3153,70 +3154,5 @@ textarea {
   background: rgba(20, 0, 20, 0.8);
   color: rgba(255, 255, 255, 0.8);
   border: none;
-}
-
-@media only screen and (max-width: 400px) {
-  .login-wrapper {
-    position: relative;
-  }
-  .login-wrapper .login {
-    display: none;
-  }
-  .login-wrapper .school-information .logo {
-    position: fixed;
-    top: 1vh;
-    right: none;
-    bottom: none;
-    left: 1vh;
-    height: 6vh;
-    width: 6vh;
-  }
-  .login-wrapper .school-information .logo .logo-img {
-    width: 100%;
-  }
-  .login-wrapper .school-information .logo .text-logo .name-img {
-    position: fixed;
-    top: 1.5vh;
-    right: none;
-    bottom: none;
-    left: 8vh;
-    font-size: 2vh;
-  }
-  .login-wrapper .school-information .logo .text-logo .name-school {
-    position: fixed;
-    top: 6.8vh;
-    right: none;
-    bottom: none;
-    left: 8vh;
-    margin-top: -3vh;
-    font-size: 1.5vh;
-  }
-  .login-wrapper .school-information .slider-information-wrapper {
-    display: none;
-  }
-  .login-wrapper .school-information .information .bg-image .bg-soe {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    z-index: 1;
-  }
-  .login-wrapper .school-information .text-information {
-    position: fixed;
-    top: none;
-    right: none;
-    bottom: 1vh;
-    left: 0.8vh;
-    width: 68vh;
-  }
-  .login-wrapper .school-information .text-information .title-information {
-    font-size: 5vh;
-    text-transform: capitalize;
-  }
-  .login-wrapper .school-information .text-information .main-information-excul {
-    font-size: 2vh;
-  }
 }
 /*# sourceMappingURL=Main.css.map */
