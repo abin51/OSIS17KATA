@@ -68,6 +68,14 @@ class Auth extends BaseController
         return view("Auth/register5", $data);
     }
 
+    public function forget()
+    {
+        $data = [
+            'title' => 'OSIS17KATA'
+        ];
+        return view("Auth/forget", $data);
+    }
+
     public function logout()
     {
         $data = [

@@ -14,7 +14,7 @@
         <span class="text-login">masuk</span>
 
         <!-- form bagian tengah -->
-        <form action="<?= base_url("Home/account"); ?>" method="POST" class="form-login" id="form-login">
+        <form action="<?= base_url("Homepage/user"); ?>" method="POST" class="form-login" id="form-login">
             <!-- nama lengkap -->
             <input type="text" placeholder="Nama lengkap" name="nama_lengkap" id="name" class="Thisform name">
 
@@ -22,7 +22,7 @@
             <input type="email" placeholder="Email" name="email" id="email" class="Thisform email">
 
             <!-- kode id -->
-            <input type="number" placeholder="Kode id" name="kode_id" id="code" class="Thisform code pe-2">
+            <input type="password" placeholder="Kode id" name="kode_id" id="code" class="Thisform code pe-2">
 
             <!-- katasandi -->
             <input type="password" placeholder="Katasandi" name="katasandi" id="pass" class="Thisform pass">
@@ -33,7 +33,7 @@
                 <button type="submit" class="Thislink login-btn" id="login-btn">masuk</button>
                
                 <!-- lupa akun -->
-                <a href="" class="Thislink forget-link">lupa akun!</a>
+                <a href="<?= base_url("Auth/forget")?>" class="Thislink forget-link">lupa akun!</a>
             </div>
         </form>
 
@@ -69,7 +69,7 @@
             </span>
 
             <!-- kode versi website -->
-            <a href="<?= base_url("Page/version");?>" class="Thislink version" id="version">
+            <a class="Thislink version" id="version">
                 V.14.2.21
             </a>
         </div>

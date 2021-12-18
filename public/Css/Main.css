@@ -240,6 +240,7 @@ textarea {
   padding: 0.2em 0;
 }
 
+.Thisbtn,
 .Thisform {
   border: none;
   outline: none;
@@ -259,164 +260,7 @@ textarea {
   transition: 0.5s;
 }
 
-.main-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: none;
-  left: 0;
-  padding: 0.8vh 0.8vh 0 0.8vh;
-  margin: 0 0 0 0;
-  height: auto;
-  width: auto;
-}
-
-.web-version {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #D4ECDD;
-}
-
-.web-version .web-content {
-  height: 80vh;
-  width: 160vh;
-  position: relative;
-  background: #FEFBF3;
-  border: .2px solid #eee;
-  overflow: auto;
-}
-
-.web-version .web-content .nav-version {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 6vh;
-  background: #00A19D;
-  padding: .5vh;
-}
-
-.web-version .web-content .nav-version .back-to-page {
-  height: 5vh;
-  width: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: rgba(255, 255, 255, 0.8);
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.web-version .web-content .nav-version .back-to-page:hover {
-  background: rgba(20, 0, 20, 0.6);
-}
-
-.web-version .web-content .nav-version .page-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.web-version .web-content .nav-version .page-menu .list-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 6vh;
-  width: auto;
-  margin-left: 0.2vh;
-  padding: 0 .8vh;
-  color: rgba(255, 255, 255, 0.8);
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.web-version .web-content .nav-version .page-menu .list-page:hover {
-  background: rgba(20, 0, 20, 0.6);
-}
-
-.web-version .web-content .version-content {
-  position: absolute;
-  top: 6vh;
-  right: 0;
-  bottom: none;
-  left: 0;
-  height: auto;
-}
-
-.web-version .web-content .version-content .logo-osis {
-  height: 20vh;
-  width: 150vh;
-  margin-top: 2vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.web-version .web-content .version-content .logo-osis .osis-logo {
-  height: 100%;
-}
-
-.web-version .web-content .version-content .information-page {
-  height: auto;
-  width: auto;
-  margin-top: 2vh;
-  padding: 1vh;
-}
-
-.login-wrapper {
+.body-wrapper .login-wrapper {
   position: fixed;
   top: 0;
   right: 0;
@@ -424,7 +268,7 @@ textarea {
   left: 0;
 }
 
-.login-wrapper .login {
+.body-wrapper .login-wrapper .login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,18 +294,18 @@ textarea {
           box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
 }
 
-.login-wrapper .login .osis-img {
+.body-wrapper .login-wrapper .login .osis-img {
   height: 20vh;
   width: 20vh;
   margin: 2vh 0;
 }
 
-.login-wrapper .login .osis-img .osis-image {
+.body-wrapper .login-wrapper .login .osis-img .osis-image {
   width: 100%;
 }
 
-.login-wrapper .login .text-login,
-.login-wrapper .login .text-login-with {
+.body-wrapper .login-wrapper .login .text-login,
+.body-wrapper .login-wrapper .login .text-login-with {
   border-bottom: 2px solid #fff;
   width: 35vh;
   color: #fff;
@@ -470,7 +314,7 @@ textarea {
   margin-bottom: 1.5vh;
 }
 
-.login-wrapper .login .form-login {
+.body-wrapper .login-wrapper .login .form-login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -488,10 +332,10 @@ textarea {
   margin-bottom: 5vh;
 }
 
-.login-wrapper .login .form-login .name,
-.login-wrapper .login .form-login .email,
-.login-wrapper .login .form-login .code,
-.login-wrapper .login .form-login .pass {
+.body-wrapper .login-wrapper .login .form-login .name,
+.body-wrapper .login-wrapper .login .form-login .email,
+.body-wrapper .login-wrapper .login .form-login .code,
+.body-wrapper .login-wrapper .login .form-login .pass {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,7 +358,7 @@ textarea {
   color: #fff;
 }
 
-.login-wrapper .login .form-login .forget-login {
+.body-wrapper .login-wrapper .login .form-login .forget-login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,7 +376,7 @@ textarea {
   margin-top: 1vh;
 }
 
-.login-wrapper .login .form-login .forget-login .login-btn {
+.body-wrapper .login-wrapper .login .form-login .forget-login .login-btn {
   height: 5vh;
   width: 13vh;
   background: #e02401;
@@ -544,12 +388,12 @@ textarea {
   margin-right: 1vh;
 }
 
-.login-wrapper .login .form-login .forget-login .forget-link {
+.body-wrapper .login-wrapper .login .form-login .forget-login .forget-link {
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.8px;
 }
 
-.login-wrapper .login .login-with {
+.body-wrapper .login-wrapper .login .login-with {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -567,7 +411,7 @@ textarea {
   width: 35vh;
 }
 
-.login-wrapper .login .login-with .login-with-icon {
+.body-wrapper .login-wrapper .login .login-with .login-with-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,33 +432,33 @@ textarea {
   margin-bottom: 4vh;
 }
 
-.login-wrapper .login .login-with .google {
+.body-wrapper .login-wrapper .login .login-with .google {
   background: #dd4b39;
 }
 
-.login-wrapper .login .login-with .facebook {
+.body-wrapper .login-wrapper .login .login-with .facebook {
   background: #3b5998;
 }
 
-.login-wrapper .login .login-with .instagram {
+.body-wrapper .login-wrapper .login .login-with .instagram {
   background: #e95950;
 }
 
-.login-wrapper .login .login-with .linkedin {
+.body-wrapper .login-wrapper .login .login-with .linkedin {
   background: #007bb5;
 }
 
-.login-wrapper .login .login-with .github {
+.body-wrapper .login-wrapper .login .login-with .github {
   background: #000;
 }
 
-.login-wrapper .login .register-link {
+.body-wrapper .login-wrapper .login .register-link {
   color: #e02401;
   border-bottom: 2px solid #e02401;
   letter-spacing: 0.8px;
 }
 
-.login-wrapper .login .bottom-information {
+.body-wrapper .login-wrapper .login .bottom-information {
   position: absolute;
   top: none;
   right: none;
@@ -637,20 +481,20 @@ textarea {
   padding: 1vh;
 }
 
-.login-wrapper .login .bottom-information .social-media-icon .sosmed-icon {
+.body-wrapper .login-wrapper .login .bottom-information .social-media-icon .sosmed-icon {
   color: #fff;
 }
 
-.login-wrapper .login .bottom-information .hakcipta {
+.body-wrapper .login-wrapper .login .bottom-information .hakcipta {
   letter-spacing: 1.5px;
   color: #fff;
 }
 
-.login-wrapper .login .bottom-information .version {
+.body-wrapper .login-wrapper .login .bottom-information .version {
   color: #fff;
 }
 
-.login-wrapper .school-information {
+.body-wrapper .login-wrapper .school-information {
   position: fixed;
   top: 0;
   right: 0;
@@ -662,7 +506,7 @@ textarea {
   display: flex;
 }
 
-.login-wrapper .school-information .information .bg-image .bg-soe {
+.body-wrapper .login-wrapper .school-information .information .bg-image .bg-soe {
   position: absolute;
   top: 0;
   right: 0;
@@ -672,7 +516,7 @@ textarea {
   z-index: 1;
 }
 
-.register-wrapper {
+.body-wrapper .register-wrapper {
   position: fixed;
   top: 0;
   right: 0;
@@ -680,7 +524,7 @@ textarea {
   left: 0;
 }
 
-.register-wrapper .register-list {
+.body-wrapper .register-wrapper .register-list {
   position: fixed;
   top: 0;
   right: none;
@@ -707,17 +551,17 @@ textarea {
           box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
 }
 
-.register-wrapper .register-list .osis-img {
+.body-wrapper .register-wrapper .register-list .osis-img {
   height: 20vh;
   width: 20vh;
 }
 
-.register-wrapper .register-list .osis-img .osis-image {
+.body-wrapper .register-wrapper .register-list .osis-img .osis-image {
   width: 100%;
 }
 
-.register-wrapper .register-list .text-register,
-.register-wrapper .register-list .text-register-with {
+.body-wrapper .register-wrapper .register-list .text-register,
+.body-wrapper .register-wrapper .register-list .text-register-with {
   border-bottom: 2px solid #fff;
   width: 35vh;
   color: #fff;
@@ -726,7 +570,7 @@ textarea {
   margin-bottom: 1.5vh;
 }
 
-.register-wrapper .register-list .list-create-account {
+.body-wrapper .register-wrapper .register-list .list-create-account {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -736,7 +580,7 @@ textarea {
           flex-direction: column;
 }
 
-.register-wrapper .register-list .list-create-account .register-list-form-1 {
+.body-wrapper .register-wrapper .register-list .list-create-account .register-list-form-1 {
   height: 6vh;
   width: 40vh;
   display: -webkit-box;
@@ -757,7 +601,7 @@ textarea {
   padding-left: 2.5vh;
 }
 
-.register-wrapper .register-list .list-create-account .register-list-form {
+.body-wrapper .register-wrapper .register-list .list-create-account .register-list-form {
   height: 6vh;
   width: 40vh;
   display: -webkit-box;
@@ -777,12 +621,12 @@ textarea {
   padding-left: 2.5vh;
 }
 
-.register-wrapper .register-list .register-btn {
+.body-wrapper .register-wrapper .register-list .register-btn {
   color: #dd4b39;
   margin: 2vh 0;
 }
 
-.register-wrapper .register-list .register-with {
+.body-wrapper .register-wrapper .register-list .register-with {
   height: auto;
   width: 35vh;
   display: -webkit-box;
@@ -800,7 +644,7 @@ textarea {
           flex-direction: row;
 }
 
-.register-wrapper .register-list .register-with .register-with-icon {
+.body-wrapper .register-wrapper .register-list .register-with .register-with-icon {
   height: 6vh;
   width: 6vh;
   display: -webkit-box;
@@ -821,27 +665,27 @@ textarea {
   margin-bottom: 4vh;
 }
 
-.register-wrapper .register-list .register-with .google {
+.body-wrapper .register-wrapper .register-list .register-with .google {
   background: #dd4b39;
 }
 
-.register-wrapper .register-list .register-with .facebook {
+.body-wrapper .register-wrapper .register-list .register-with .facebook {
   background: #3b5998;
 }
 
-.register-wrapper .register-list .register-with .instagram {
+.body-wrapper .register-wrapper .register-list .register-with .instagram {
   background: #e95950;
 }
 
-.register-wrapper .register-list .register-with .linkedin {
+.body-wrapper .register-wrapper .register-list .register-with .linkedin {
   background: #007bb5;
 }
 
-.register-wrapper .register-list .register-with .github {
+.body-wrapper .register-wrapper .register-list .register-with .github {
   background: #000;
 }
 
-.register-wrapper .register-list .bottom-information {
+.body-wrapper .register-wrapper .register-list .bottom-information {
   position: absolute;
   top: none;
   right: none;
@@ -864,20 +708,20 @@ textarea {
   padding: 1vh;
 }
 
-.register-wrapper .register-list .bottom-information .social-media-icon .sosmed-icon {
+.body-wrapper .register-wrapper .register-list .bottom-information .social-media-icon .sosmed-icon {
   color: #fff;
 }
 
-.register-wrapper .register-list .bottom-information .hakcipta {
+.body-wrapper .register-wrapper .register-list .bottom-information .hakcipta {
   letter-spacing: 1.5px;
   color: #fff;
 }
 
-.register-wrapper .register-list .bottom-information .version {
+.body-wrapper .register-wrapper .register-list .bottom-information .version {
   color: #fff;
 }
 
-.register-wrapper .register-form {
+.body-wrapper .register-wrapper .register-form {
   position: fixed;
   top: 0;
   right: 0;
@@ -889,7 +733,7 @@ textarea {
   display: flex;
 }
 
-.register-wrapper .register-form .information .bg-image .bg-soe {
+.body-wrapper .register-wrapper .register-form .information .bg-image .bg-soe {
   position: absolute 0;
   top: 0;
   right: 0;
@@ -899,7 +743,7 @@ textarea {
   z-index: 1;
 }
 
-.register-wrapper .register-form .form-register-bio {
+.body-wrapper .register-wrapper .register-form .form-register-bio {
   position: absolute;
   top: 0;
   right: 0;
@@ -910,7 +754,7 @@ textarea {
   padding: 5vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -923,8 +767,8 @@ textarea {
   background: rgba(20, 0, 20, 0.6);
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio,
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio,
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio {
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -937,8 +781,8 @@ textarea {
   margin-bottom: 1vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio .text-data,
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .text-data {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio .text-data,
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .text-data {
   border-bottom: 2px solid #fff;
   width: 50vh;
   display: -webkit-box;
@@ -950,8 +794,8 @@ textarea {
   margin-bottom: 2vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio .form-bio,
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .form-bio {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio .form-bio,
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .form-bio {
   background: rgba(15, 0, 20, 0.6);
   color: rgba(255, 255, 255, 0.8);
   height: 6vh;
@@ -960,7 +804,7 @@ textarea {
   padding-left: 2vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio .lesson-wrapper {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio .lesson-wrapper {
   height: 20vh;
   width: 139vh;
   border-radius: 5px;
@@ -968,11 +812,11 @@ textarea {
   background: rgba(15, 0, 20, 0.6);
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio .lesson-wrapper .lesson-tag-input {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .left-bio .lesson-wrapper .lesson-tag-input {
   width: 137.5vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .next-btn {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .next-btn {
   height: 6vh;
   width: 18vh;
   background: #e02401;
@@ -984,7 +828,7 @@ textarea {
   border-radius: 0.8vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .btn-reg {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .btn-reg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1008,30 +852,30 @@ textarea {
   margin-top: 3vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .btn-reg .next-page {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .btn-reg .next-page {
   color: #FF5151;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview {
   height: 27vh;
   width: 139vh;
   position: relative;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document-view {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document-view {
   height: 27vh;
   width: 50vh;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 1vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document {
   display: none;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document1 {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document1 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1056,7 +900,7 @@ textarea {
   border-radius: 2px;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document1 .upload-text {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document1 .upload-text {
   height: 8vh;
   width: 20vh;
   display: -webkit-box;
@@ -1080,12 +924,12 @@ textarea {
   letter-spacing: 1px;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document1 .dd-text {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .document-preview .document1 .dd-text {
   font-weight: 200;
   text-transform: capitalize;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .wishlist {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .wishlist {
   background: rgba(14, 0, 20, 0.6);
   padding: 0.8vh;
   border-radius: 5px;
@@ -1097,7 +941,7 @@ textarea {
   margin-bottom: .5vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .plan-wrapper {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .plan-wrapper {
   height: 20vh;
   width: 139vh;
   border-radius: 5px;
@@ -1105,11 +949,11 @@ textarea {
   background: rgba(15, 0, 20, 0.6);
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .plan-wrapper .plan {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .plan-wrapper .plan {
   width: 137.5vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .right-security-bio {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .right-security-bio {
   height: 47vh;
   width: 139vh;
   display: -webkit-box;
@@ -1127,13 +971,13 @@ textarea {
           flex-direction: row;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .right-security-bio .face-scan {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .right-security-bio .face-scan {
   height: 47vh;
   width: 47vh;
   background: rgba(15, 0, 20, 0.6);
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .right-security-bio .key-words {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .right-bio .right-security-bio .key-words {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1144,7 +988,7 @@ textarea {
   width: 90vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .sk-bio {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .sk-bio {
   height: 75vh;
   width: 139vh;
   background: rgba(15, 0, 20, 0.6);
@@ -1155,7 +999,78 @@ textarea {
   margin-bottom: 0.8vh;
 }
 
-.register-wrapper .register-form .form-register-bio .form-register-ubio .agree-sk a {
+.body-wrapper .register-wrapper .register-form .form-register-bio .form-register-ubio .agree-sk a {
   color: #00A19D;
+}
+
+.body-wrapper .Navmenu {
+  height: 6vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .5vh;
+  background: #fff;
+}
+
+.body-wrapper .Navmenu .nav-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body-wrapper .Navmenu .nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body-wrapper .Navmenu .nav-right .btn-page {
+  height: 5vh;
+  width: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.5vh;
+}
+
+.body-wrapper .Navmenu .nav-right .user-img {
+  border: 1px solid #333;
+  border-radius: 6vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5vh;
+  width: 5vh;
+}
+
+.body-wrapper .user-page {
+  background: #ff0000;
+  padding-top: 6vh;
+  height: 120vh;
+  width: 65vw;
 }
 /*# sourceMappingURL=Main.css.map */
