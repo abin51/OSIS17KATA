@@ -847,24 +847,171 @@ textarea {
         width: auto;
         position: relative;
         background: #ebebeb;
-        padding-top: 6vh;
-
-        .user-info {
-            height: 120vh;
-            width: 65vw;
+        
+        .user {
             display: flex;
-            justify-content: center;
-            padding-top: 1.2vh;
-            
-            .user-bg {
-                width: 64vw;
-                height: 40vh;
-                background: #dadada;
-                overflow: hidden;
+            flex-direction: column;
+            align-items: center;
+            width: 65vw;
+            padding-top: 7.2vh;
 
-                .bg-user-img {
+            .user-info {
+                height: auto;
+                width: 64vw;
+                display: flex;
+                flex-direction: column;
+                padding-top: 1.2vh;
+                background: #fff;
+                padding: .8vh;
+                border-radius: .8vh;
+                margin-bottom: 1.2vh;
+                
+                .user-bg {
                     width: 100%;
+                    height: 40vh;
+                    background: #dadada;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: .8vh;
+                
+                    .bg-user-img {
+                        width: 100%;
+                    }
                 }
+
+                .user-info-content {
+                    width: 64vw;
+                    height: 14vh;       
+                    position: relative;
+                    margin-bottom: 1.2vh;
+    
+                    .user-info-image {
+                        background: #eee;
+                        position: absolute;
+                        top: -12.5vh;
+                        left: 3vh;
+                        height: 25vh;
+                        width: 25vh;
+                        border-radius: 30vh;
+                    }
+
+                    .user-status {
+                        background: #dadada;
+                        height: 5vh;
+                        width: 5vh;
+                        position: absolute;
+                        left: 3vh;
+                        top: 7vh;
+                        border-radius: 5vh;
+                    }
+    
+                    .edit-profile {
+                        position: absolute;
+                        bottom: -1vh;
+                        right: 2vh;
+                        z-index: 2;
+                    }
+
+                    .user-information {
+                        // border: 1px solid #333;
+                        position: absolute;
+                        right: 1.6vh;
+                        top: 1vh;
+                        height: 14vh;
+                        width: 48vw;
+
+                        .l-name {
+                            font-size: 1.5em;
+                        }
+
+                        .u-label {
+                            display: flex;
+                            align-items: center;
+                            height: 5vh;
+                            font-size: 2.3vh;
+
+                            .label-item {
+                                height: 4vh;
+                                width: auto;
+                                border-radius: 4vh;
+                                border: 1px solid #333;
+                                padding: 0 1vh;
+                            }
+
+                            .school {
+                                margin-right: 1vh;
+                            }
+
+                            .ambition {
+                                margin-right: 1vh;
+                            }
+                        }
+
+                        .u-sosmed {
+                            position: absolute;
+                            right: .6vh;
+                            top: -5.5vh;
+                            height: 5vh;
+                            display: flex;
+                            align-items: center;
+
+                            .usosmed-link {
+                                color: #fff;
+                                margin-left: 0.5vh;
+                                height: 3vh;
+                                width: 3vh;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        } 
+                    }
+                }
+
+            }
+
+            .add-post {
+                background: #fff;
+                width: 64vw;
+                height: auto;
+                border-radius: .8vh;
+                margin-bottom: 1.2vh;
+                padding: 0.8vh;
+                display: flex;
+                flex-direction: column;
+
+                .post-input {
+                    height: 20vh;
+                    width: 63.2vw;
+                    background: #efefef;
+                    border-radius: .8vh;
+                    border: none;
+                    resize: none;
+                }
+
+                .post-tag {
+                    // border: 1px solid #333;
+                    height: auto;
+                    padding-top: 0.8vh;
+                    display: flex;
+                    align-items: center;
+
+
+                    .tag {
+                        border: 1px solid #333;
+                        height: 6vh;
+                        width: 30vw;
+                    }
+                }
+            }
+
+            .post {
+                background: #fff;
+                width: 64vw;
+                height: 60vh;
+                margin-bottom: 1.2vh;
             }
         }
 
