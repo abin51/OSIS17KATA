@@ -17,7 +17,7 @@
         <!-- link navigasi -->
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-book-open"></i></a>
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-keyboard"></i></a>
-        <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-gamepad"></i></a>
+        <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-comments"></i></a>
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-bell"></i></a>
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-home"></i></a>
 
