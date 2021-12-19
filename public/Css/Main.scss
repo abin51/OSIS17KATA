@@ -804,6 +804,11 @@ textarea {
         justify-content: space-between;
         padding: .5vh;
         background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
 
         .nav-left {
             display: flex;
@@ -824,8 +829,8 @@ textarea {
             }
 
             .user-img {
-                border: 1px solid #333;
-                border-radius: 6vh;
+                background: #ebebeb;
+                border-radius: 5vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -838,9 +843,78 @@ textarea {
 
     // user page 
     .user-page {
-        background: #ff0000;
+        height: auto;
+        width: auto;
+        position: relative;
+        background: #ebebeb;
         padding-top: 6vh;
-        height: 120vh;
-        width: 65vw;
+
+        .user-info {
+            height: 120vh;
+            width: 65vw;
+            display: flex;
+            justify-content: center;
+            padding-top: 1.2vh;
+            
+            .user-bg {
+                width: 64vw;
+                height: 40vh;
+                background: #dadada;
+                overflow: hidden;
+
+                .bg-user-img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .user-dashboard {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            width: 33.5vw;
+            padding-top: 7.2vh;
+            display: flex;
+            flex-direction: column;
+
+            .clock {
+                background: #fff;
+                width: 33vw;
+                height: 22vh;  
+                margin-bottom: 1.2vh;
+            }
+
+            .number-ofpost {
+                width: 33vw;
+                height: 16.8vh;
+                margin-bottom: 1.2vh;
+                display: flex;
+                justify-content: space-between;
+
+                .image,
+                .post,
+                .storage {
+                    background: #fff;
+                    width: 10.6vw;
+                    height: 16.8vh;
+                }
+            }
+        }
+
+        .achievement {
+            background: #fff;
+            width: 33vw;
+            height: 30vh;
+            margin-bottom: 1.2vh;
+        }
+
+        .featured-post {
+            background: #fff;
+            width: 33vw;
+            height: 20vh;
+            margin-bottom: 1.2vh;
+        }
     }
 }

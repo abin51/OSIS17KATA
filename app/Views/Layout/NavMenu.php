@@ -1,10 +1,10 @@
-<!-- naviigation menu -->
+<!-- navigasi menu -->
 <nav class="Navmenu shadow-sm">
-    <!-- nav left -->
+    <!-- navigasi kiri -->
     <div class="nav-left">
-        <!-- search -->
+        <!-- pencarian -->
         <form action="" method="get" class="Thisform search" id="search">
-            <!-- search input -->
+            <!-- kolom pencarian -->
             <input type="text" placeholder="cari..." name="search-input" id="search-input" class="Thisform search-input">
             <button type="submit" class="Thisbtn btn-submit" id="btn-submit"><i class="fa fa-fw fa-search"></i></button>
             <button type="submit" class="Thisbtn btn-mic" id="btn-mic"><i class="fa fa-fw fa-microphone"></i></button>
@@ -12,19 +12,19 @@
         </form>
     </div>
 
-    <!-- nav- right -->
+    <!-- navigasi kanan -->
     <div class="nav-right">
-        <!-- nav link -->
+        <!-- link navigasi -->
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-book-open"></i></a>
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-keyboard"></i></a>
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-gamepad"></i></a>
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-bell"></i></a>
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-home"></i></a>
 
-        <!-- user image -->
+        <!-- gambar pengguna -->
         <div class="user-img"></div>
 
-        <!-- dropdown feature -->
+        <!-- menu dropdown pengguna -->
         <div class="dropdown-user">
         </div>
     </div>

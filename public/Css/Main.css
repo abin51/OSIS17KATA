@@ -1016,6 +1016,11 @@ textarea {
           justify-content: space-between;
   padding: .5vh;
   background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
 }
 
 .body-wrapper .Navmenu .nav-left {
@@ -1052,8 +1057,8 @@ textarea {
 }
 
 .body-wrapper .Navmenu .nav-right .user-img {
-  border: 1px solid #333;
-  border-radius: 6vh;
+  background: #ebebeb;
+  border-radius: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1068,9 +1073,91 @@ textarea {
 }
 
 .body-wrapper .user-page {
-  background: #ff0000;
+  height: auto;
+  width: auto;
+  position: relative;
+  background: #ebebeb;
   padding-top: 6vh;
+}
+
+.body-wrapper .user-page .user-info {
   height: 120vh;
   width: 65vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.2vh;
+}
+
+.body-wrapper .user-page .user-info .user-bg {
+  width: 64vw;
+  height: 40vh;
+  background: #dadada;
+  overflow: hidden;
+}
+
+.body-wrapper .user-page .user-info .user-bg .bg-user-img {
+  width: 100%;
+}
+
+.body-wrapper .user-page .user-dashboard {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 33.5vw;
+  padding-top: 7.2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.body-wrapper .user-page .user-dashboard .clock {
+  background: #fff;
+  width: 33vw;
+  height: 22vh;
+  margin-bottom: 1.2vh;
+}
+
+.body-wrapper .user-page .user-dashboard .number-ofpost {
+  width: 33vw;
+  height: 16.8vh;
+  margin-bottom: 1.2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.body-wrapper .user-page .user-dashboard .number-ofpost .image,
+.body-wrapper .user-page .user-dashboard .number-ofpost .post,
+.body-wrapper .user-page .user-dashboard .number-ofpost .storage {
+  background: #fff;
+  width: 10.6vw;
+  height: 16.8vh;
+}
+
+.body-wrapper .user-page .achievement {
+  background: #fff;
+  width: 33vw;
+  height: 30vh;
+  margin-bottom: 1.2vh;
+}
+
+.body-wrapper .user-page .featured-post {
+  background: #fff;
+  width: 33vw;
+  height: 20vh;
+  margin-bottom: 1.2vh;
 }
 /*# sourceMappingURL=Main.css.map */
