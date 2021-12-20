@@ -33,20 +33,19 @@
 
                 <div class="right-bio">
                     <!-- text data -->
-                    <span class="text-data text-capitalize">rencana setelah lulus</span>
+                    <span class="text-data text-capitalize">rencana setelah lulus (opsional)</span>
                     
                     <!-- list rencana setelah lulus -->
-                    <textarea placeholder="Daftar rencana setelah lulus" id="wishlist" class="wishlist"></textarea>
+                    <textarea placeholder="Daftar rencana setelah lulus ..." id="wishlist" class="wishlist"></textarea>
 
                     <!-- pelaran yang diminati -->
                     <div class="plan-wrapper">
-                        <input type="text" name="rencana" placeholder="Rencana setelah lulus" id="plan" class="Thisform form-bio plan">
+                        <input type="text" name="rencana" placeholder="cita-cita ..." id="plan" class="Thisform form-bio plan">
                     </div>
 
                     <div class="btn-reg">
                         <!-- lanjut -->
                         <button type="submit" class="next-btn">lanjutkan</button>
-                        <a href="<?= base_url("Auth/register2")?>" class="Thislink next-page">lewati</a>
                     </div>
                 </div> 
             </form>

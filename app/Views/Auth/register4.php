@@ -36,7 +36,7 @@
 
                 <div class="right-bio">
                     <!-- text data -->
-                    <span class="text-data text-capitalize">keamanan ganda</span>
+                    <span class="text-data text-capitalize">keamanan ganda (opsional)</span>
                     
                     <div class="right-security-bio">
                         <!-- face scan -->

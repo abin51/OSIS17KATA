@@ -22,10 +22,13 @@
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-home"></i></a>
 
         <!-- gambar pengguna -->
-        <div class="user-img"></div>
-
-        <!-- menu dropdown pengguna -->
-        <div class="dropdown-user">
-        </div>
+        <div class="Thislink user-img"></div>
     </div>
 </nav>
+
+<!-- menu dropdown pengguna -->
+<div class="rounded shadow-sm dropdown-user">
+</div>
+
+<!-- tutup dropdown -->
+<div class="close-dropdown"></div>

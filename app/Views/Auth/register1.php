@@ -21,11 +21,8 @@
             <form action="<?= base_url("Auth/register2")?>" class="form-register-ubio rounded" method="post">
                 <div class="left-bio">
                     <!-- text data -->
-                    <span class="text-data text-capitalize">organisasi</span>
-                    
-                    <!-- nama lengkap -->
-                    <input type="text" name="nama_lengkap_anggota" placeholder="Nama lengkap" id="full-name-member" class="Thisform form-bio full-name-member">
-                    
+                    <span class="text-data text-capitalize">organisasi (opsional)</span>
+                  
                     <!-- nama organisasi -->
                     <input type="text" name="nama_organisasi" placeholder="Nama organisasi" id="organization-name" class="Thisform form-bio organization-name">
                     
@@ -41,10 +38,7 @@
 
                 <div class="right-bio">
                     <!-- text data -->
-                    <span class="text-data text-capitalize">ekstrakurikuler</span>
-                    
-                    <!-- nama lengkap -->
-                    <input type="text" name="nama_lengkap_anggota" placeholder="Nama lengkap" id="full-name-member" class="Thisform form-bio full-name-member">
+                    <span class="text-data text-capitalize">ekstrakurikuler (opsional)</span>
                     
                     <!-- nama ekstrakurikuler -->
                     <input type="text" name="nama_ekstrakurikuler" placeholder="Nama ekstrakurikuler" id="excul-name" class="Thisform form-bio excul-name">

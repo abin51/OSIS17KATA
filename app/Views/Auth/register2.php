@@ -44,7 +44,7 @@
 
                 <div class="right-bio">
                     <!-- text data -->
-                    <span class="text-data text-capitalize">bukti dokumen</span>
+                    <span class="text-data text-capitalize">bukti dokumen (opsional)</span>
                     
                     <!-- tampilan bukti dokumen -->
                     <div class="document-preview">
