@@ -1,0 +1,98 @@
+@use 'sett/mixin';
+@use 'sett/variable';
+
+// navmenu
+.Navmenu {
+    @include mixin.distype(flex, center, space-between);
+    @include mixin.position(fixed, 0, 0, none, 0);
+    height: 6vh;
+    padding: .5vh;
+    background: variable.$pmc-3;
+    z-index: 5;
+
+    .nav-left {
+        @include mixin.distype(flex, center, none);
+
+        .search {
+            @include mixin.distype(flex, center, none);
+            padding: 0 1.5vh;
+            background: variable.$pmc-6;
+
+            .search-input {
+                @include mixin.dimention(5vh, 20vw);
+                color: variable.$skc-6;
+            }
+
+            .btn-submit, .btn-mic, .btn-camera {
+                @include mixin.dimention(5vh, 5vh);
+                margin-left: 0.5vh;
+                color: variable.$skc-6;
+            }
+        }
+    }
+    
+    .nav-right {
+        @include mixin.distype(flex, center, none);
+
+        .btn-page {
+            @include mixin.distype(flex, center, center);
+            @include mixin.dimention(5vh, 5vh);
+            margin-right: 0.5vh;
+            color: variable.$skc-6;
+        }
+
+        .user-img {
+            @include mixin.distype(flex, center, center);
+            @include mixin.dimention(5vh, 5vh);
+            background: variable.$skc-6;
+        }
+    }
+}
+
+.user-notification-content {
+    @include mixin.position(fixed, 7vh, -80vh, none, none);
+    @include mixin.dimention(92vh, 33vw);
+    background: variable.$pmc-8;
+    z-index: 3;
+    transition: .6s;
+}
+
+.dropdown-user {
+    @include mixin.position(fixed, -50vh, 1vh, none, none);
+    @include mixin.dimention(auto, 16vw);
+    background: variable.$skc-5;
+    z-index: 3;
+    transition: .6s;
+    padding: 0.5vh;
+
+    .modebright {
+        @include mixin.dimention(8vh, 100%);
+        border: 1px solid #333;
+    }
+
+    .dropdown-link {
+        @include mixin.distype(flex, none, none, column);
+        
+        .droplink {
+            @include mixin.distype(flex, center, center);
+            @include mixin.dimention(6vh, 100%);
+            border: 1px solid #333;
+            margin-top: 0.5vh;
+        }
+    }
+}
+
+.close-notification {
+    @include mixin.position(fixed, -50vh, 11vh, none, none);
+    @include mixin.dimention(6vh, 6vh);
+    z-index: 6;
+    transition: .6s;
+}
+
+.close-dropdown {
+    @include mixin.position(fixed, -50vh, 0, none, none);
+    @include mixin.dimention(6vh, 6vh);
+    z-index: 6;
+    background: transparent;
+    transition: .6s;
+}

@@ -29,27 +29,27 @@
 // akhir
 
 // menu dropdown pengguna mulai
-    // $(".user-img").click(function() {
-    //     $(".dropdown-user").css(
-    //         {
-    //             "top" : "7vh"
-    //         }
-    //     );
+    $(".user-img").click(function() {
+        $(".dropdown-user").css(
+            {
+                "top" : "7vh"
+            }
+        );
 
-    //     $(".close-dropdown").css(
-    //         {
-    //             "top" : "0"
-    //         }
-    //     );
-    // });
+        $(".close-dropdown").css(
+            {
+                "top" : "0"
+            }
+        );
+    });
 
-    // $(".close-dropdown").click(function() {
-    //     $(".dropdown-user, .close-dropdown").css(
-    //         {
-    //             "top" : "-50vh"
-    //         }
-    //     );
-    // });
+    $(".close-dropdown").click(function() {
+        $(".dropdown-user, .close-dropdown").css(
+            {
+                "top" : "-50vh"
+            }
+        );
+    });
 // akhir
 
 // status pengguna mulai
@@ -80,11 +80,6 @@
             document.getElementById("day-calendar").innerHTML = "0" + hari + "," + " ";
         }
 
-        var tanggalKalender = document.getElementsByClassName("date");
-        if (tanggalKalender === tanggal) {
-            tanggalKalender.classList.add("today");
-        }
-
         // jam
         var jam = waktu.getHours();
         var menit = waktu.getMinutes();
@@ -98,7 +93,7 @@
         document.getElementById("mi-second").innerHTML = milidetik;
 
         if (jam < 10 ) {
-            document.getElementById("hour-clock").innerHTML = "0" + jam;
+            document.getElementById("hour-clock").innerHTML = "0"  + jam;
         }
 
         if (menit < 10) {
@@ -118,10 +113,16 @@
         }
 
         // pengubah icon siang dan malam
-            // if (jam > 6) {
-            //     var changeDayIcon = document.getElementById("changeDay");
-            //     changeDayIcon.classList.add("fa-moon");
-            // }
+            if (detik > 18 ) {
+                var changeDayIcon = document.getElementById("changeDay");
+                changeDayIcon.classList.remove("fa-sun");
+                changeDayIcon.classList.add("fa-moon");
+            } 
+            if (detik > 6 && detik < 18) {
+                var changeDayIcon = document.getElementById("changeDay");
+                changeDayIcon.classList.remove("fa-moon");
+                changeDayIcon.classList.add("fa-sun");
+            }
         // akhir
     }, 1);
 // akhir
@@ -144,13 +145,13 @@
     $(".list-todo-content").click(function() {
         $(".todo-input-check").css (
             {
-                "background" : "#57CC99",
+                "background" : "#F98404",
             }
         );
         
         $(".list-todo-content").css (
             {
-                "filter" : "brightness(50%)"
+                "filter" : "brightness(20%)"
             }
         );
     });

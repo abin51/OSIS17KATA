@@ -1,0 +1,541 @@
+@use 'sett/mixin';
+@use 'sett/variable';
+
+// user page 
+.user-page {
+    @include mixin.dimention();
+    position: relative;
+    background: variable.$layout-bg-4;
+    
+    .user {
+        @include mixin.distype(flex, center, none, column);
+        width: 65vw;
+        padding-top: 6vh;
+
+        .user-info {
+            @include mixin.distype(flex, none, none, column);
+            @include mixin.dimention(auto, 64vw);
+            @include mixin.wrap(.8vh .8vh .8vh .8vh, 1.2vh 1.2vh 1.2vh 1.2vh);
+            background: variable.$pmc-3;
+            
+            .user-bg {
+                @include mixin.distype(flex, center, center);
+                @include mixin.dimention(40vh, 100%);
+                background: variable.$pmc-4;
+                overflow: hidden;
+                filter: brightness(60%);
+                
+                .bg-user-img {
+                    width: 100%;
+                }
+            }
+
+            .user-info-content {
+                @include mixin.dimention(14vh, 64vw);
+                position: relative;
+                margin-bottom: 1.2vh;
+
+                .user-info-image {
+                    @include mixin.distype(flex, center, center);
+                    @include mixin.position(absolute, -12.5vh, none, none, 3vh);
+                    @include mixin.dimention(25vh, 25vh);
+                    background: variable.$pmc-7;
+                    font-size: 8vh;
+                    color: variable.$skc-6;
+                }
+
+                .user-status {
+                    @include mixin.distype(flex, center, center);
+                    @include mixin.position(absolute, 7vh, none, none, 3vh);
+                    @include mixin.dimention(5vh, 5vh);
+                    background: variable.$pmc-7;
+                    color: variable.$skc-5;
+                    font-size: 3.2vh;
+                    z-index: 2;
+                }
+
+                .edit-profile {
+                    @include mixin.position(absolute, none, 2vh, -1vh, none);
+                    color: variable.$skc-6;
+                    z-index: 2;
+                }
+
+                .user-information {
+                    @include mixin.position(absolute, 1vh, 1.6vh, none, none);
+                    @include mixin.dimention(14vh, 48vw);
+
+                    .u-name {
+                        color: variable.$skc-7;
+                    }
+                    .l-name {
+                        font-size: 1.5em;
+                        color: variable.$skc-7;
+                    }
+
+                    .u-label {
+                        @include mixin.distype(flex, center, none);
+                        height: 5vh;
+                        font-size: 2.3vh;
+                        margin-top: -.5vh;
+
+                        .label-item {
+                            @include mixin.dimention(4vh, auto);
+                            border: 1px solid variable.$skc-8;
+                            color: variable.$skc-8;
+                            font-weight: 500;
+                            padding: 0 1vh;
+                        }
+
+                        .school {
+                            margin-right: 1vh;
+                        }
+
+                        .ambition {
+                            margin-right: 1vh;
+                        }
+                    }
+
+                    .u-sosmed {
+                        @include mixin.distype(flex, center, none);
+                        @include mixin.position(absolute, -5.5vh, .6vh, none, none);
+                        height: 5vh;
+
+                        .usosmed-link {
+                            @include mixin.distype(flex, center, center);
+                            @include mixin.dimention(3vh, 3vh);
+                            color: variable.$skc-5;
+                            margin-left: 0.5vh;
+                        }
+                    } 
+                }
+            }
+
+        }
+
+        .add-post {
+            @include mixin.dimention(auto, 64vw);
+            @include mixin.distype(flex, none, none, column);
+            background: variable.$pmc-3;
+            margin-bottom: 1.2vh;
+            padding: 0.8vh;
+
+            .post-input {
+                @include mixin.dimention(20vh, 63.2vw);
+                background: variable.$pmc-6;
+                color: variable.$skc-7;
+                border: none;
+                resize: none;
+                padding: 0.8vh;
+            }
+
+            .post-tag {
+                @include mixin.distype(flex, center);
+                height: auto;
+                padding-top: 0.8vh;
+
+                .tag {
+                    @include mixin.dimention(6vh, 30vw);
+                    background-color: variable.$pmc-6;
+                    color: variable.$skc-7;
+                    padding: 0 2vh;
+                }
+
+                .btn-post {
+                    @include mixin.distype(flex, center);
+                    @include mixin.dimention(7vh, auto);
+
+                    .btn-post-link {
+                        @include mixin.distype(flex, center, center);
+                        @include mixin.dimention(6vh, 6vh);
+                        margin-left: .6vh;
+                        background: variable.$skc-9;
+                        color: variable.$skc-5;
+                    }
+                }
+
+                .btn-submit-post {
+                    @include mixin.distype(flex, center, center);
+                    @include mixin.dimention(6vh, 8.6vw);
+                    margin-left: 1vh;
+                    background: variable.$skc-10;
+                    color: variable.$skc-5;
+                    letter-spacing: .3vh;
+                }
+            }
+        }
+
+        .post {
+            @include mixin.dimention(auto, 64vw);
+            background: variable.$pmc-3;
+            margin-bottom: 1.2vh;
+            padding: 0.8vh;
+
+            .userpost-information {
+                @include mixin.distype(flex, center, start);
+                @include mixin.dimention(10vh, 100%);
+                margin-bottom: 0.8vh;
+
+                .user-image {
+                    @include mixin.dimention(10vh, 10vh);
+                    background: variable.$pmc-7;
+                    border-radius: 10vh;
+                }
+
+                .uname-post {
+                    margin-left: 0.5vh;
+
+                    .uname {
+                        font-size: 3vh;
+                        color: variable.$skc-6;
+                    }
+
+                    .time-post {
+                        font-size: 2vh;
+                        color: variable.$skc-6;
+                    }
+                }
+            }
+
+            .post-image {
+                @include mixin.distype(flex, center, center);
+                @include mixin.dimention(28vh, 100%);
+                max-height: 80vh;
+                background: variable.$pmc-4;
+                margin-bottom: 0.8vh;
+                overflow: hidden;
+
+                .imgPost {
+                    width: 100%;
+                }
+            }
+
+            .text-userpost {
+                @include mixin.dimention(auto, 100%);
+                margin-bottom: 0.8vh;
+                color: variable.$skc-7
+            }
+
+            .nav-userpost {
+                @include mixin.dimention(auto, 100%);
+                @include mixin.distype(flex, center, space-between);
+
+                .nav-left {
+                    @include mixin.dimention(auto, auto);
+                    @include mixin.distype(flex, center, space-between);
+
+                    .link-emoticon {
+                        @include mixin.distype(flex, center, center);
+                        @include mixin.dimention(4vh, 4vh);
+                        margin-right: 0.5vh;
+                        color: variable.$skc-6;
+                    }
+                }
+                .nav-right {
+                    display: flex;
+
+                    .nav-user {
+                        @include mixin.distype(flex, center, center);
+                        @include mixin.dimention(4vh, 4vh);
+                        color: variable.$skc-6;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard {
+        @include mixin.position(fixed, 0, 0, 0, none);
+        @include mixin.distype(flex, none, none, column);
+        z-index: 1;
+        width: 33.5vw;
+        padding-top: 7.2vh;
+
+        .clock {
+            @include mixin.dimention(auto, 33vw);
+            @include mixin.distype(flex, center, space-between);
+            background: variable.$pmc-3;
+            margin-bottom: 1.2vh;
+            padding: 0.8vh;
+
+            .calendar {
+                @include mixin.distype(flex, none, space-between, column);
+                @include mixin.dimention(21vh, 21vw);
+
+                .calendar-detail {
+                    @include mixin.distype(flex, center, space-between);
+                    @include mixin.dimention(4vh, 100%);
+
+                    .month-date {
+                        @include mixin.distype(flex, center, center);
+                        @include mixin.dimention(4vh, auto);
+                        background: variable.$pmc-4;
+                        padding: 0 .5vh;
+                        letter-spacing: .3vh; 
+                        color: variable.$skc-6;
+                    }
+
+                    .dayear {
+                        @include mixin.distype(flex, center, space-between);
+                        @include mixin.dimention(4vh, auto);
+                        padding: 0 .5vh;
+                        background: variable.$pmc-4;
+
+                        .day, .year {
+                            @include mixin.distype(flex, center, center);
+                            @include mixin.dimention(4vh, auto);
+                            letter-spacing: .3vh; 
+                            color: variable.$skc-8;
+                        }
+                    }
+                }
+
+                .date-wrap {
+                    @include mixin.dimention(auto, 100%);
+                    background: variable.$pmc-4;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 1vh 0.5vh;
+
+                    .date {
+                        @include mixin.distype(flex, center, center);
+                        @include mixin.dimention(3.1vh, 3.1vh);
+                        background-color: variable.$skc-9;
+                        margin: .5vh 0 0 1vh;
+                        border-radius: 5vh;
+                        font-size: 1.8vh;
+                        color: variable.$skc-5;
+                    }
+
+                    .today {
+                        background-color: #F21170;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .clowet {
+                @include mixin.dimention(21vh, 10.8vw);
+                display: flex;
+                flex-wrap: wrap;
+
+                .clock-wrap {
+                    @include mixin.distype(flex, center, space-between);
+                    @include mixin.dimention(10vh, 10.8vw);
+                    margin-bottom: 0.5vh;
+
+                    .hour {
+                        @include mixin.distype(flex, center, center);
+                        @include mixin.dimention(10vh, 6vw);
+                        font-size: 6vh;
+                        color: variable.$skc-7;
+                    }
+
+                    .minsec-wrap {
+                        @include mixin.dimention(10vh, 4.7vw);
+                        padding: 0.5vh;
+
+                        .min-sec {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 0.5vh;
+                            background: variable.$pmc-4;
+                            
+                            span {
+                                color: variable.$skc-8;
+                            }
+                        }
+
+                        .m-second {
+                            background: variable.$pmc-4;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 4.3vh;
+                            
+                            span {
+                                color: variable.$skc-8;
+                            }
+                        }
+                    }
+                }
+
+                .weather {
+                    @include mixin.distype(flex, center, space-between);
+                    @include mixin.dimention(10vh, 10.8vw);
+
+                    .weather-content {
+                        @include mixin.distype(flex, center, center);
+                        @include mixin.dimention(10vh, 6vw);
+                        font-size: 5vh;
+                        color: variable.$skc-9;
+                    }
+
+                    .timetem {
+                        @include mixin.dimention(10vh, 4.7vw);
+                        padding: 0.5vh;
+
+                        .time-wet {
+                            @include mixin.distype(flex, center, center);
+                            @include mixin.dimention(4vh, 100%);
+                            background: variable.$pmc-4;
+                            margin-bottom: 0.5vh;
+                            color: variable.$skc-8;
+                        }
+
+                        .tem-wet {
+                            @include mixin.distype(flex, center, center);
+                            @include mixin.dimention(4.6vh, 100%);
+                            background: variable.$pmc-4;
+                            color: variable.$skc-8;
+                        }
+                    }
+                }
+            }
+        }
+
+        .number-ofpost {
+            @include mixin.distype(flex, none, space-between);
+            @include mixin.dimention(auto, 33vw);
+            margin-bottom: 1.2vh;
+
+            .image,
+            .post,
+            .storage {
+                @include mixin.distype(flex, center, center);
+                @include mixin.dimention(10vh, 10.6vw);
+                background: variable.$pmc-3;
+
+                i {
+                    font-size: 3vh;
+                    color: variable.$skc-6;
+                }
+            }
+        }
+    }
+
+    .todo {
+        @include mixin.distype(flex, none, none, column);
+        @include mixin.dimention(26vh, 33vw);
+        background: variable.$pmc-3;
+        margin-bottom: 1.2vh;
+        padding: 0.8vh;
+
+        .todo-nav {
+            @include mixin.distype(flex, center, none);
+            @include mixin.dimention(6vh, 100%);
+            margin-bottom: 0.8vh;
+
+            .todo-input {
+                @include mixin.dimention(6vh, 20vw);
+                color: variable.$skc-6;
+                background: variable.$pmc-6;
+                padding-left: 2vh;
+                margin-right: 0.5vh;
+            }
+
+            .time-todo-input {
+                @include mixin.dimention(6vh, 7vw);
+                color: variable.$skc-6;
+                background: variable.$pmc-6;
+                padding-left: 2.5vh;
+            }
+
+            .btn-todo, .btn-settodo {
+                @include mixin.distype(flex, center, center);
+                @include mixin.dimention(5vh, 5vh);
+                margin-left: 0.5vh;
+                color: variable.$skc-6;
+            } 
+        }
+
+        .todo-content {
+            @include mixin.dimention(17vh, 100%);
+            background: variable.$pmc-6;
+            padding: 0.8vh;
+            overflow: auto;
+
+            .list-todo-content {
+                @include mixin.distype(flex, center, space-between);
+                @include mixin.dimention(5vh, 100%);
+                background: variable.$skc-6;
+                padding: 0.8vh;
+                margin-bottom: 0.8vh;
+
+                .list-left-info {
+                    @include mixin.distype(flex, center, none);
+
+                    label {
+                        @include mixin.dimention(2vh, 2vh);
+                        border: 2px solid variable.$skc-9;
+                        margin-right: 1vh;
+                    }
+
+                    .text-list {
+                        font-weight: 600;
+                        color: variable.$pmc-7;
+                    }
+                }
+
+                .list-right-info {
+                    .time-todo {
+                        color: variable.$skc-8
+                    }
+                }
+            }
+        }
+    }
+
+    .achievement {
+        @include mixin.distype(flex, center, space-around);
+        @include mixin.dimention(auto, 33vw);
+        background: variable.$pmc-3;
+        margin-bottom: 1.2vh;
+
+        .achievement-progress {
+            @include mixin.distype(flex, center, center);
+            @include mixin.dimention(10vh, 10vh);
+
+            .circle{
+                @include mixin.dimention(8vh, 8vh);
+                position: relative;
+                cursor: default;
+
+                .box {
+                    @include mixin.distype(flex, center, center);
+                    @include mixin.position(absolute, 50%, none, none, 50%);
+                    @include mixin.dimention(100%, 100%);
+                    background: variable.$pmc-6;
+                    transform: translate(-50%, -50%) scale(0.8);
+                    transition: all 0.2s;
+                    overflow: hidden;
+
+                    span {
+                        @include mixin.position(absolute, 50%, none, none, 50%);
+                        color: variable.$skc-10;
+                        font: 600 3vh sans-serif;
+                        transform: translate(-45%, -45%);
+                        transition: all 0.1s;
+                    }
+                }
+            }
+        }
+    }
+
+    .featured-post {
+        @include mixin.dimention(18.5vh, 33vw);
+        background: variable.$pmc-3;
+        margin-bottom: 1.2vh;
+        padding: 0.8vh 0;
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .fp {
+            @include mixin.dimention(8vh, 4.19vw);
+            background: variable.$pmc-7;
+            margin: 0 .5vh;
+            margin-bottom: 1vh;
+        }
+    }
+}

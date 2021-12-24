@@ -1,0 +1,152 @@
+@use 'sett/mixin';
+@use 'sett/variable';
+
+// login wrapper
+.login-wrapper {
+    @include mixin.position (fixed, 0, 0, 0, 0);
+
+    .login {
+        @include mixin.distype (flex, center, none, column);
+        @include mixin.position (fixed, 0, none, 0, 0);
+        width: 40vh;
+        z-index: 3;
+        background: variable.$pmc-2;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
+
+        .osis-img {
+            @include mixin.dimention (20vh, 20vh);
+            margin: 2vh 0;
+
+            .osis-image {
+                width: 100%;
+            }
+        }
+
+        .text-login,
+        .text-login-with {
+            border-bottom: 2px solid #fff;
+            width: 35vh;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5vh;
+        }
+        
+        .form-login {
+            @include mixin.distype (flex, center, none, column);
+            width: 40vh;
+            margin-bottom: 5vh;
+
+            .name,
+            .email,
+            .code,
+            .pass {
+                @include mixin.distype(flex, center, center);
+                @include mixin.wrap (0 1vh 0.4vh 1vh, 1vh 0 0 0);
+                @include mixin.dimention (5vh, 36vh);
+                background: variable.$layout-bg-3;
+                border-radius: 5vh;
+                color: #fff;
+            }
+
+            .forget-login {
+                @include mixin.distype (flex, center, none, space-between);
+                width: 35vh;
+                margin-top: 1vh;
+
+                .login-btn {
+                    @include mixin.dimention(5vh, 13vh);
+                    background: #e02401;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    color: #fff;
+                    border: none;
+                    border-radius: 0.5vh;
+                    margin-right: 1vh;
+                }
+
+                .forget-link {
+                    color: variable.$skc-1;
+                    letter-spacing: 0.8px;
+                }
+            }
+        }
+
+        .login-with {
+            @include mixin.distype (flex, start, space-between);
+            @include mixin.dimention (auto, 35vh);
+
+            .login-with-icon {
+                @include mixin.distype ();
+                @include mixin.dimention (6vh, 6vh);
+                color: #fff;
+                font-size: 3vh;
+                margin-bottom: 4vh;
+            }
+
+            .google {
+                background: #dd4b39;
+            }
+
+            .facebook {
+                background: #3b5998;
+            }
+
+            .instagram {
+                background: #e95950;
+            }
+
+            .linkedin {
+                background: #007bb5;
+            }
+
+            .github {
+                background: #000;
+            }
+        }
+
+        .register-link {
+            color: #e02401;
+            border-bottom: 2px solid #e02401;
+            letter-spacing: 0.8px;
+        }
+
+        .bottom-information {
+            @include mixin.position (absolute, none, none, 0, none);
+            @include mixin.distype (flex, center, center, column);
+            width: 40vh;
+            padding: 1vh;
+
+            .social-media-icon .sosmed-icon {
+                color: #fff;
+            }
+
+            .hakcipta {
+                letter-spacing: 1.5px;
+                color: #fff;
+            }
+
+            .version {
+                color: #fff;
+            }
+        }
+    }
+
+    .school-information {
+        @include mixin.position (fixed, 0, 0, 0, 0);
+        background: #eadeb8;
+        display: flex;
+
+        .information {
+
+            .bg-image {
+
+                .bg-soe {
+                    @include mixin.position (absolute, 0, 0, 0, 0);
+                    width: 100%;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

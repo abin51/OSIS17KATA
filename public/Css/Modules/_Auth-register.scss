@@ -1,0 +1,315 @@
+@use 'sett/mixin';
+@use 'sett/variable';
+
+// register wrapper 
+.register-wrapper {
+    @include mixin.position (fixed, 0, 0, 0, 0);
+
+    .register-list {
+        @include mixin.position (fixed, 0, none, 0, 0);
+        @include mixin.distype (flex, center, start, column);
+        z-index: 3;
+        width: 40vh;
+        padding-top: 5vh;
+        background: variable.$pmc-2;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
+
+        .osis-img {
+            @include mixin.dimention (20vh, 20vh);
+
+            .osis-image {
+                width: 100%;
+            }
+        }
+
+        .text-register,
+        .text-register-with {
+            border-bottom: 2px solid #fff;
+            width: 35vh;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5vh;
+        }
+
+        .list-create-account {
+            display: flex;
+            flex-direction: column;
+
+            .register-list-form-1 {
+                @include mixin.dimention (6vh, 40vh);
+                @include mixin.distype (flex, center, start);
+                color: variable.$skc-5;
+                border-left: 3px solid #96C7C1;
+                padding-left: 2.5vh;
+            }
+
+            .register-list-form {
+                @include mixin.dimention (6vh, 40vh);
+                @include mixin.distype (flex, center, start);
+                color: variable.$skc-1;
+                padding-left: 2.5vh;
+            }
+        }
+
+        .register-btn {
+            color: #dd4b39;
+            margin: 2vh 0;
+        }
+
+        .register-with {
+            @include mixin.dimention (auto, 35vh);
+            @include mixin.distype (flex, start, space-between);
+
+            .register-with-icon {
+                @include mixin.dimention (6vh, 6vh);
+                @include mixin.distype ();
+                color: #fff;
+                font-size: 3vh;
+                margin-bottom: 4vh;
+            }
+
+            .google {
+                background: #dd4b39;
+            }             
+            
+            .facebook {
+                background: #3b5998;
+            }
+
+            .instagram {
+                background: #e95950;
+            }
+
+            .linkedin {
+                background: #007bb5;
+            }
+
+            .github {
+                background: #000;
+            }
+        }
+
+        .bottom-information {
+            @include mixin.position (absolute, none, none, 0, none);
+            @include mixin.distype (flex, center, center, column);
+            width: 40vh;
+            padding: 1vh;
+
+            .social-media-icon {
+
+                .sosmed-icon {
+                    color: #fff;
+                }
+            }
+
+            .hakcipta {
+                letter-spacing: 1.5px;
+                color: #fff;
+            }
+
+            .version {
+            color: #fff;
+            } 
+        }
+    }
+
+    .register-form {
+        @include mixin.position (fixed, 0, 0, 0, 0);
+        background: #FFF3E4;
+        display: flex;
+
+        .information {
+
+            .bg-image {
+
+                .bg-soe {
+                    @include mixin.position (absolute 0, 0, 0, 0);
+                    width: 100%;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .form-register-bio {
+            @include mixin.position (absolute, 0, 0, 0, none);
+            z-index: 2;
+            width: 152vh;
+            padding: 5vh;
+
+            .form-register-ubio {
+                display: flex;
+                flex-direction: column;
+                padding: 1.5vh;
+                height: 90vh;
+                background: variable.$layout-bg-1;
+
+                .left-bio,
+                .right-bio {
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    color: variable.$skc-1;
+                    margin-bottom: 1vh;
+
+                    .text-data {
+                        border-bottom: 2px solid #fff;
+                        width: 50vh;
+                        display: flex;
+                        color: #fff;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        margin-bottom: 2vh;
+                    }
+
+                    .form-bio {
+                        background: variable.$pmc-1;
+                        color: variable.$skc-3;
+                        height: 6vh;
+                        border-radius: 6vh;
+                        margin-bottom: .5vh;
+                        padding-left: 2vh;
+                    }
+                }
+
+                .left-bio {
+
+                    .lesson-wrapper {
+                        @include mixin.dimention (20vh, 139vh);
+                        border-radius: 5px;
+                        padding: 0.8vh;
+                        background: variable.$pmc-1;
+
+                        .lesson-tag-input {
+                            width: 137.5vh;
+                        }
+                    }
+                }
+
+                .right-bio {
+
+                    .next-btn {
+                        @include mixin.dimention (6vh, 18vh);
+                        background: #e02401;
+                        border: none;
+                        outline: none;
+                        text-transform: capitalize;
+                        letter-spacing: 2px;
+                        color: #fff;
+                        border-radius: 0.8vh;
+                    }
+
+                    .btn-reg {
+                        @include mixin.distype (flex, center, space-between);
+                        @include mixin.position (absolute, none, none, 5vh, none);
+                        @include mixin.dimention(10vh, 28vh);
+                        margin-top: 3vh;
+
+                        .next-page {
+                            color: #FF5151;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    .document-preview {
+                        @include mixin.dimention(27vh, 139vh);
+                        position: relative;
+
+                        .document-view {
+                            @include mixin.dimention (27vh, 50vh);
+                            background: variable.$skc-1;
+                            border-radius: 1vh;
+                        }
+
+                        .document {
+                            display: none;
+                        }
+
+                        .document1 {
+                            @include mixin.position (absolute, 0, 0, 0, none);
+                            @include mixin.distype (flex, center, center, column);
+                            border: .5px dotted #fff;
+                            background: rgba(14, 0, 20, 0.6);
+                            width: 88vh;
+                            border-radius: 2px;
+
+                            .upload-text {
+                                @include mixin.dimention (8vh, 20vh);
+                                @include mixin.distype ();
+                                background: #e02401;
+                                border-radius: 5px;
+                                margin-bottom: -0.2vh;
+                                margin-top: 1vh;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                            }
+
+                            .dd-text {
+                                font-weight: 200;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+
+                    .wishlist {
+                        background: rgba(14, 0, 20, 0.6);
+                        padding: 0.8vh;
+                        border-radius: 5px;
+                        resize: none;
+                        color: rgba(255, 255, 255, 0.9);
+                        border: none;
+                        outline: none;
+                        height: 20vh;
+                        margin-bottom: .5vh;
+                    }
+
+                    .plan-wrapper {
+                        height: 20vh;
+                        width: 139vh;
+                        border-radius: 5px;
+                        padding: 0.8vh;
+                        background: variable.$pmc-1;
+
+                        .plan {
+                            width: 137.5vh;
+                        }
+                    }
+
+                    .right-security-bio {
+                        @include mixin.dimention(47vh, 139vh);
+                        @include mixin.distype(flex, center, space-between);
+
+                        .face-scan {
+                            @include mixin.dimention(47vh, 47vh);
+                            background: variable.$pmc-1;
+                        }
+                        
+                        .key-words {
+                            display: flex;
+                            flex-direction: column;
+                            width: 90vh;
+                        }
+                    }
+                }
+
+                .sk-bio {
+                    @include mixin.dimention(75vh, 139vh);
+                    background: variable.$pmc-1;
+                    color: variable.$skc-1;
+                    overflow: auto;
+                    padding: 0.8vh;
+                    border-radius: 5px;
+                    margin-bottom: 0.8vh;
+                }
+
+                .agree-sk {
+
+                    a {
+                        color: #00A19D;
+                    }
+                }
+            }
+        }
+    }
+}

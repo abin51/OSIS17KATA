@@ -19,7 +19,7 @@
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-keyboard"></i></a>
         <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-comments"></i></a>
         <button class="Thislink Thisbtn btn-page" id="user-notification"><i class="fa fa-fw fa-bell"></i></button>
-        <a href="" class="Thislink btn-page"><i class="fa fa-fw fa-home"></i></a>
+        <a href="<?= base_url("homepage")?>" class="Thislink btn-page"><i class="fa fa-fw fa-home"></i></a>
 
         <!-- gambar pengguna -->
         <div class="Thislink rounded-circle user-img"></div>

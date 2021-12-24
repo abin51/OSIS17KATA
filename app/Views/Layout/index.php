@@ -10,7 +10,6 @@
 
     <!-- Css Style -->
     <link rel="stylesheet" href="<?= base_url('Css')?>/main.css">
-    <link rel="stylesheet" href="<?= base_url('Css')?>/mobile.css">
 
     <!-- bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
