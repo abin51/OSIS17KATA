@@ -18,12 +18,12 @@
             <div class="user-info-content">
                 <!-- gambar pengguna -->
                 <input type="file" name="photo profile" id="add-photo-profile" class="d-none add-photo-profile">
-                <label for="add-photo-profile" class="Thislink shadow-sm user-info-image">
+                <label for="add-photo-profile" class="Thislink rounded-circle shadow-sm user-info-image">
                     <i class="fa fa-fw fa-camera-retro"></i>
                 </label>
 
                 <!-- status pengguna -->
-                <div class="Thislink shadow-sm user-status" id="user-status">
+                <div class="Thislink rounded-circle shadow-sm user-status" id="user-status">
                     <i class="far fa-fw fa-smile-wink"></i>
                 </div>
 
@@ -38,10 +38,10 @@
                     <!-- label pengguna -->
                     <div class="u-label">
                         <!-- asal sma -->
-                        <a href="" class="Thislink text-uppercase school label-item">sman 17 kabupaten tangerang</a>
+                        <a href="" class="Thislink text-uppercase rounded-pill school label-item">sman 17 kabupaten tangerang</a>
 
                         <!-- cita cita -->
-                        <a href class="Thislink text-capitalize ambition label-item">cyber security</a>
+                        <a href class="Thislink text-capitalize rounded-pill ambition label-item">cyber security</a>
                     </div>
 
                     <!-- social media pengguna -->
@@ -65,23 +65,23 @@
             <!-- area tag, tambah gambar dan kirim -->
             <form class="post-tag">
                 <!-- tag -->
-                <input type="text" placeholder="Tag teman ..." name="tag" id="tag" class="Thisform tag">
+                <input type="text" placeholder="Tag teman ..." name="tag" id="tag" class="Thisform rounded-pill tag">
 
                 <!-- tombol postingan -->
                 <input type="file" name="add-file" id="add-file" class="d-none add-file">
                 <input type="file" name="add-image" id="add-image" class="d-none add-image">
                 <input type="file" name="add-video" id="add-video" class="d-none add-video">
                 <div class="btn-post">
-                    <a href="" class="Thislink btn-post-link"><i class="fa fa-fw fa-layer-group"></i></a>
-                    <button class="Thislink Thisbtn btn-post-link"><i class="fa fa-fw fa-paperclip"></i></button>
-                    <label for="add-file" class="Thislink btn-post-link"><i class="fa fa-fw fa-file"></i></label>
-                    <label for="add-image" class="Thislink btn-post-link"><i class="fa fa-fw fa-image"></i></label>
-                    <label for="add-video" class="Thislink btn-post-link"><i class="fa fa-fw fa-video"></i></label>
-                    <a href="" class="Thislink btn-post-link"><i class="fa fa-fw fa-microphone-alt"></i></a>
-                    <button class="Thislink Thisbtn btn-post-link"><i class="fa fa-fw fa-code"></i></button>
+                    <a href="" class="Thislink rounded-circle btn-post-link"><i class="fa fa-fw fa-layer-group"></i></a>
+                    <button class="Thislink rounded-circle Thisbtn btn-post-link"><i class="fa fa-fw fa-paperclip"></i></button>
+                    <label for="add-file" class="Thislink rounded-circle btn-post-link"><i class="fa fa-fw fa-file"></i></label>
+                    <label for="add-image" class="Thislink rounded-circle btn-post-link"><i class="fa fa-fw fa-image"></i></label>
+                    <label for="add-video" class="Thislink rounded-circle btn-post-link"><i class="fa fa-fw fa-video"></i></label>
+                    <a href="" class="Thislink rounded-circle btn-post-link"><i class="fa fa-fw fa-microphone-alt"></i></a>
+                    <button class="Thislink rounded-circle Thisbtn btn-post-link"><i class="fa fa-fw fa-code"></i></button>
                 </div>
 
-                <button class="Thislink Thisbtn btn-submit-post"><i class="fa fa-fw fa-paper-plane me-1"></i>Posting</button>
+                <button class="Thislink rounded-pill Thisbtn btn-submit-post"><i class="fa fa-fw fa-paper-plane me-1"></i>Posting</button>
             </form>
         </div>
 
@@ -103,7 +103,9 @@
             </div>
 
             <!-- gambar postingan -->
-            <div class="rounded post-image"></div>
+            <div class="rounded post-image">
+                <img src="<?= base_url("Img/p3.jpg")?>" alt="" class="imgPost" id="imgPost">
+            </div>
 
             <!-- teks postingan -->
             <div class="text-userpost">
@@ -114,16 +116,14 @@
             <nav class="nav-userpost">
                 <!-- nabigasi emosi dan komentar -->
                 <div class="nav-left">
-                    <a href="" class="Thislink link-emoticon"><i class="fa fa-fw fa-grin-squint"></i></a>
-                    <!-- <a href="" class="Thislink link-emoticon"><i class="fa fa-fw fa-smile"></i></a>
-                    <a href="" class="Thislink link-emoticon"><i class="fa fa-fw fa-frown"></i></a> -->
-                    <a href="" class="Thislink link-emoticon"><i class="fa fa-fw fa-heart"></i></a>
-                    <a href="" class="Thislink link-emoticon"><i class="fa fa-fw fa-comment"></i></a>
-                    <a href="" class="Thislink link-emoticon"><i class="fa fa-fw fa-share-alt"></i></a>
+                    <a href="" class="Thislink link-emoticon"><i class="far fa-fw fa-grin-squint"></i></a>
+                    <a href="" class="Thislink link-emoticon"><i class="far fa-fw fa-heart"></i></a>
+                    <a href="" class="Thislink link-emoticon"><i class="far fa-fw fa-comment"></i></a>
                 </div>
 
                 <!-- navigasi pengguna -->
                 <div class="nav-right">
+                    <a href="" class="Thislink nav-user"><i class="fa fa-fw fa-share"></i></a>
                     <a href="" class="Thislink nav-user"><i class="fa fa-fw fa-ellipsis-h"></i></a>
                 </div>
             </nav>
@@ -135,7 +135,54 @@
         <!-- jam dan cuaca -->
         <div class="rounded clock">
             <!-- kalender -->
-            <div class="rounded calendar"></div>
+            <div class="rounded calendar">
+                <!-- detail kalender -->
+                <div class="calendar-detail">
+                    <!-- bulan -->
+                    <div class="rounded month-date text-uppercase">desember</div>
+
+                    <!-- hari dan tahun -->
+                    <div class="rounded dayear">
+                        <sapn class="day me-1" id="day-calendar"></sapn>
+                        <sapn class="year" id="year-calendar"></sapn>
+                    </div>
+                </div>
+
+                <!-- tanggal -->
+                <div class="rounded date-wrap">
+                    <span class="Thislink date" id="date-calendar">1</span>
+                    <span class="Thislink date" id="date-calendar">2</span>
+                    <span class="Thislink date" id="date-calendar">3</span>
+                    <span class="Thislink date" id="date-calendar">4</span>
+                    <span class="Thislink date" id="date-calendar">5</span>
+                    <span class="Thislink date" id="date-calendar">6</span>
+                    <span class="Thislink date" id="date-calendar">7</span>
+                    <span class="Thislink date" id="date-calendar">8</span>
+                    <span class="Thislink date" id="date-calendar">9</span>
+                    <span class="Thislink date" id="date-calendar">10</span>
+                    <span class="Thislink date" id="date-calendar">11</span>
+                    <span class="Thislink date" id="date-calendar">12</span>
+                    <span class="Thislink date" id="date-calendar">13</span>
+                    <span class="Thislink date" id="date-calendar">14</span>
+                    <span class="Thislink date" id="date-calendar">15</span>
+                    <span class="Thislink date" id="date-calendar">16</span>
+                    <span class="Thislink date" id="date-calendar">17</span>
+                    <span class="Thislink date" id="date-calendar">18</span>
+                    <span class="Thislink date" id="date-calendar">19</span>
+                    <span class="Thislink date" id="date-calendar">20</span>
+                    <span class="Thislink date" id="date-calendar">21</span>
+                    <span class="Thislink date" id="date-calendar">22</span>
+                    <span class="Thislink date" id="date-calendar">23</span>
+                    <span class="Thislink date today" id="date-calendar">24</span>
+                    <span class="Thislink date" id="date-calendar">25</span>
+                    <span class="Thislink date" id="date-calendar">26</span>
+                    <span class="Thislink date" id="date-calendar">27</span>
+                    <span class="Thislink date" id="date-calendar">28</span>
+                    <span class="Thislink date" id="date-calendar">29</span>
+                    <span class="Thislink date" id="date-calendar">30</span>
+                    <span class="Thislink date" id="date-calendar">31</span>
+                </div>
+            </div>
 
             <!-- jam dan cuaca -->
             <div class="clowet">
@@ -168,13 +215,13 @@
                 <div class="rounded weather">
                     <!-- konten cuaca -->
                     <div class="weather-content">
-                        <i class="fa fa-fw fa-cloud-moon-rain"></i>
+                        <i class="fa fa-fw fa-moon"></i>
                     </div>
 
                     <!-- konten suhu dan waktu -->
                     <div class="timetem">
                         <div class="rounded time-wet">
-                            <i class="fa fa-fw fa-moon"></i>
+                            <i class="fa fa-fw fa-cloud" id="changeDay"></i>
                         </div>
 
                         <div class="rounded tem-wet">
@@ -203,13 +250,13 @@
             <!-- todo navigasi -->
             <form class="todo-nav">
                 <!-- input todo -->
-                <input type="text" placeholder="Tambahkan kegiatan ..." name="todo-input" id="todo-input" class="Thisform todo-input">
+                <input type="text" placeholder="Tambahkan kegiatan ..." name="todo-input" id="todo-input" class="Thisform rounded-pill todo-input">
+                <input type="text" placeholder="jam ..." name="time-todo-input" id="time-todo-input" class="Thisform rounded-pill time-todo-input">
 
                 <!-- btn submit todo -->
                 <button class="Thislink Thisbtn btn-todo"><i class="fa fa-fw fa-plus"></i></button>
 
-                <!-- penggaturan todo -->
-                <a href="" class="Thislink btn-settodo"><i class="fa fa-fw fa-cog"></i></a>
+                <!-- statistik todo -->
                 <a href="" class="Thislink btn-settodo"><i class="fa fa-fw fa-chart-bar"></i></a>
             </form>
 
@@ -221,7 +268,7 @@
                     <div class="list-left-info">
                         <!-- input check -->
                         <input type="checkbox" name="check-todo" id="check-todo" class="d-none check-todo">
-                        <label for="check-todo" class="todo-input-check"></label>
+                        <label for="check-todo" class="rounded-circle todo-input-check"></label>
                         
                         <!-- teks list todo -->
                         <div class="text-list">Lorem ipsum dolor sit amet.</div>
@@ -237,17 +284,86 @@
 
         <!-- pencapaian -->
         <div class="rounded achievement">
-            <a href="" class="Thislink chl challenge1"></a>
-            <a href="" class="Thislink chl challenge2"></a>
-            <a href="" class="Thislink chl challenge3"></a>
-            <a href="" class="Thislink chl challenge4"></a>
-            <a href="" class="Thislink chl challenge5"></a>
-            <a href="" class="Thislink chl challenge6"></a>
+            <div class="achievement-progress">
+                <div class="rounded-circle circle">
+                    <div class="bar"></div>
+                    <div class="rounded-circle box"><span></span></div>
+                </div>
+            </div>
+
+            <div class="achievement-progress js">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="rounded-circle box"><span></span></div>
+                </div>
+            </div>
+
+            <div class="achievement-progress react">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="rounded-circle box"><span></span></div>
+                </div>
+            </div>
+            
+            <div class="achievement-progress react">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="rounded-circle box">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievement-progress react">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="rounded-circle box"><span></span></div>
+                </div>
+            </div>
+
+            <div class="achievement-progress react">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="rounded-circle box"><span></span></div>
+                </div>
+            </div>
+
+            <div class="achievement-progress react">
+                <div class="circle">
+                    <div class="bar"></div>
+                    <div class="rounded-circle box"><span></span></div>
+                </div>
+            </div> 
         </div>
+            
+        <script>
+        let options = {
+            startAngle: -1.55,
+            size: 250,
+            value: 0.9,  // nilai proses 1
+            fill: {gradient: ['#3E00FF', '#AE00FB']}
+        }
+
+        $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+        function(event, progress, stepValue){
+            $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+        });
+
+        // proses 2
+        $(".js .bar").circleProgress({
+            value: 0.70
+        });
+
+        // proses 3
+        $(".react .bar").circleProgress({
+            value: 0.60
+        });
+        </script>
 
         <!-- postingan pilihan -->
         <div class="rounded featured-post">
             <div class="Thislink fp rounded"></div>
+            <!-- <div class="Thislink fp rounded"></div>
             <div class="Thislink fp rounded"></div>
             <div class="Thislink fp rounded"></div>
             <div class="Thislink fp rounded"></div>
@@ -259,8 +375,7 @@
             <div class="Thislink fp rounded"></div>
             <div class="Thislink fp rounded"></div>
             <div class="Thislink fp rounded"></div>
-            <div class="Thislink fp rounded"></div>
-            <div class="Thislink fp rounded"></div>
+            <div class="Thislink fp rounded"></div> -->
         </div>
     </div>
 </div>
