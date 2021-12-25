@@ -60,14 +60,13 @@
 .dropdown-user {
     @include mixin.position(fixed, -50vh, 1vh, none, none);
     @include mixin.dimention(auto, 16vw);
-    background: variable.$skc-5;
+    background: variable.$pmc-8;
     z-index: 3;
     transition: .6s;
     padding: 0.5vh;
 
     .modebright {
         @include mixin.dimention(8vh, 100%);
-        border: 1px solid #333;
     }
 
     .dropdown-link {
@@ -76,7 +75,6 @@
         .droplink {
             @include mixin.distype(flex, center, center);
             @include mixin.dimention(6vh, 100%);
-            border: 1px solid #333;
             margin-top: 0.5vh;
         }
     }

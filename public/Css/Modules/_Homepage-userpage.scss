@@ -1,6 +1,100 @@
 @use 'sett/mixin';
 @use 'sett/variable';
 
+.db-locked-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: variable.$layout-bg-1;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .db-content {
+        background-color: #090117;
+        height: auto;
+        width: 18vw;
+        padding: 1vh;
+        position: fixed;
+        top: 30%;
+        left: 43%;
+        z-index: 8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .form-pin-input {
+            border: 2px solid variable.$skc-8;
+            height: 100%;
+            width: 100%;
+            padding: 1vh;
+
+            .keypin {
+                background: variable.$pmc-8;
+                color: variable.$skc-7;
+                width: 100%;
+                height: 10vh;
+                padding: 0 1vw;
+            }
+
+            .keypad {
+                height: auto;
+                width: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+
+                .keypad-pin {
+                    background: variable.$skc-9;
+                    height: 6vh;
+                    width: 6vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 1vh;
+                    margin-bottom: 0;
+                    color: variable.$skc-6;
+                }
+            }
+
+            .btn-pin {
+                position: absolute;
+                bottom: 2.2vh;
+                right: 4.7vh;
+                height: 6vh;
+                width: 6vh;
+                background: variable.$skc-10;
+                color: variable.$skc-6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    
+    .db-unlocked {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: variable.$layout-bg-2;
+        z-index: 7;
+
+        i {
+            color: variable.$skc-1;
+            font-size: 4vh;
+            position: fixed;
+            top: 3vh;
+            right: 3vh;
+        }
+    }
+}
+
 // user page 
 .user-page {
     @include mixin.dimention();
@@ -230,6 +324,7 @@
                         color: variable.$skc-6;
                     }
                 }
+
                 .nav-right {
                     display: flex;
 
